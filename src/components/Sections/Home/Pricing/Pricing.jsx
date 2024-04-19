@@ -12,23 +12,21 @@ const Pricing = () => {
         {popUp ? <PopUp popUp={popUp} setPopUp={setPopUp} /> : ""}
 
         <HeaderInfo>
-            <h1 className="font40 extraBold">Ознакомьтесь с нашими ценами</h1>
+            <h1 className="font40 extraBold">Explore Our Pricing</h1>
             <p className={"subtitle"}>
-            В Adigmo, мы предлагаем конкурентоспособные цены и гибкие тарифные планы для всех наших услуг веб-разработки. Наша цель — предложить вам оптимальные решения, которые обеспечат вам высокий возврат инвестиций
+            Discover flexible pricing plans tailored to your business needs. From budget-friendly packages to comprehensive solutions, we offer transparent pricing with no hidden fees. Find the perfect plan to maximize your ROI and drive your business forward.
             </p>
         </HeaderInfo>
         <Container>
             {
-                data.price.map(({id,title,subtitle,price,ruleTextOne,ruleTextThree,ruleTextTwo})=>{
+                data.price.map(({id,title,subtitle,price,texts})=>{
                     return(
                         <Card
                             key={id}
                             title={title}
                             price={price}
                             subtitle={subtitle}
-                            ruleTextOne={ruleTextOne}
-                            ruleTextThree={ruleTextThree}
-                            ruleTexTwo={ruleTextTwo}
+                            texts={texts}
                             click={()=> setPopUp(true)}
                         />
                     )

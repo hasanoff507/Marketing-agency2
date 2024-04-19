@@ -18,7 +18,7 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
   @media screen and (min-width: 1600px){
     width:70%;
@@ -33,7 +33,7 @@ export const Container = styled.div`
   }
   
   @media screen and (max-width: 800px){
-    width: 80%;
+    width: 90%;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -67,7 +67,6 @@ export const HeaderInfo = styled.div`
     line-height: 22px;
     @media (max-width: 600px) {
       width: 90%;
-      display: none;
       
     }
   }

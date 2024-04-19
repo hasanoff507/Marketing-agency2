@@ -9,7 +9,7 @@ function App() {
 const [loader, setLoader] = useState(true)
 setTimeout(()=>{
 setLoader(false)
-},3000)
+},100)
   
   return (
     <>

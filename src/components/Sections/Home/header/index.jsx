@@ -33,7 +33,7 @@ const Header = () => {
     name: "",
     number: "",
     email: "",
-    service: "Лендинг",
+    service: "Google Ads",
   });
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -54,15 +54,15 @@ const Header = () => {
     console.log(values)
     const errors = {};
     if (!values.name) {
-      errors.name = "Имя обязательно!";
+      errors.name = "Name required!";
     } else if (values.name.length < 4) {
-      errors.name = "Имя должно содержать не менее 4 символов!";
+      errors.name = "The name must contain at least 4 characters!";
     } else if (values.number.length == "" ) {
-      errors.number = "Номер обязательно ";
+      errors.number = "Phone Number required";
     } else if (currentNumber.length < 12) {
     
       errors.number =
-        "Номер телефона должен состоять не менее чем из 12 символов!";
+        "The phone number must consist of at least 12 characters!";
     } else {
       HttpRequest({
         e,
@@ -88,15 +88,15 @@ const Header = () => {
       <Container>
         <LeftSide>
           <Title>
-            Экспертное создание
+          Unlock Your Growth at
             <div>
               <TypeAnimation
                 sequence={[
-                  "сайтов", // Types 'One'
+                  "Google Ads", // Types 'One'
                   2000, // Waits 1s
-                  "Бизнес сайта", // Deletes 'One' and types 'Two'
+                  "Facebook Ads", // Deletes 'One' and types 'Two'
                   4000, // Waits 2s
-                  "Интернет магазина",
+                  "SEO",
                   4000,
                   // Types 'Three' without deleting 'Two'
                 ]}
@@ -107,25 +107,25 @@ const Header = () => {
                 style={{ fontSize: "", display: "inline-block" }}
               />
             </div>
-            <div>для увеличения продаж</div>
+            <div className="under-title">with Adigmo</div>
           </Title>
-          <MobileBtn onClick={() => setPopUp(true)}>начать</MobileBtn>
+          <MobileBtn onClick={() => setPopUp(true)}>Get Started</MobileBtn>
         </LeftSide>
 
         <RightSide>
           <Form onSubmit={handleSubmit}>
             <FormContainer>
-              <FormTitle> Свяжитесь с нами</FormTitle>
+              <FormTitle> Connect with Us</FormTitle>
               <p
                 style={formErrors.name ? { color: "red" } : { color: "#fff" }}
               >
-                {formErrors.name ? formErrors.name : "Имя"}
+                {formErrors.name ? formErrors.name : "Name"}
               </p>
               <Input
                 className={"input-numb"}
                 value={state.name}
                 type={"Name"}
-                placeholder={"Имя"}
+                placeholder={"Name"}
                 maxLength={30}
                 onChange={(e) =>
                   setState({ ...state, name: e.target.value.trim() })
@@ -136,14 +136,14 @@ const Header = () => {
                   formErrors.number ? { color: "red" } : { color: "#fff" }
                 }
               >
-                {formErrors.number ? formErrors.number : "Номер телефона"}
+                {formErrors.number ? formErrors.number : "Phone Number"}
               </p>
 
               <PatternFormat
                 className={"input-numb"}
                 value={state.number}
                 type={"tel"}
-                placeholder={"Номер телефона"}
+                placeholder={"Phone Number"}
                 format="+998(##)###-##-##"
                 allowEmptyFormatting
                 mask="_"
@@ -151,16 +151,16 @@ const Header = () => {
                 onChange={(e) => setState({ ...state, number: e.target.value })}
               />
 
-              <p>Электронная почта</p>
+              <p>Email Address</p>
               <Input
                 className={"numb"}
                 type="email"
-                placeholder={"Электронная почта "}
+                placeholder={"Email Address "}
                 value={state.email}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
               />
 
-              <p>Сервис</p>
+              <p>Service</p>
 
               <SelectInput
                 onChange={(e) =>
@@ -174,7 +174,7 @@ const Header = () => {
                 ))}
               </SelectInput>
             </FormContainer>
-            <Button> Отправить </Button>
+            <Button> Get Started </Button>
           </Form>
         </RightSide>
       </Container>

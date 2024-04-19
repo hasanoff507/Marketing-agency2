@@ -53,7 +53,7 @@ export const UlStyle = styled.ul`
     font-size: 20px;
     @media only screen and (max-width:600px) {
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 500;
     }
   }
 `;

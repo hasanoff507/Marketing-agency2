@@ -16,62 +16,140 @@ export const data = {
       {
         id:0,
         link:"home",
-        name:"Главная"
+        name:"Home"
     },
     {
         id:1,
         link:"our-service",
-        name:"Услуги"
+        name:"Service"
     },
     {
         id:2,
         link:"pricing",
-        name:"Цены"
+        name:"Price"
     },
     {
         id:3,
         link:"projects",
-        name:"Проекты "
+        name:"Projects "
     },
     {
         id:4,
         link:"AboutUs",
-        name:"О нас "
+        name:"About Us "
     },
     {
         id:6,
         link:"contact",
-        name:"Контакты"
+        name:"Contact"
     },
     ],
 
     price:[
         {
             id:0,
-            title:"Лендинг",
-            price:99,
+            title:"Default",
+            price:"950",
             subtitle:"",
-            ruleTextOne:"Анализ рынка и конкурентов",
-            ruleTextTwo:"Профессиональный дизайн",
-            ruleTextThree:"Уникальное наполнение контентом"
+            texts:[
+              {
+                id:0,
+                title:"Complete campaign management"
+              },
+              {
+                id:1,
+                title:"Complete campaign management"
+              },
+              {
+                id:2,
+                title:"No limit on campaigns, keywords, etc."
+              },
+              {
+                id:3,
+                title:"Dedicated and direct contact"
+              },
+              {
+                id:4,
+                title:"Continuous reporting with Google Data Studio"
+              },
+              
+            ]
         },
         {
             id:1,
-            title:"Бизнес сайт",
-            price:499,
+            title:"Premium",
+            price:"15%",
             subtitle:"",
-            ruleTextOne:"Адаптация под бизнес-цели",
-            ruleTextTwo:"Оптимизированная структура сайта",
-            ruleTextThree:"Продвинутые инструменты для конверсии"
+            texts:[
+              {
+                id:0,
+                title:"from €6,501 monthly advertising spend"
+              },
+              {
+                id:1,
+                title:"Complete campaign management"
+              },
+              {
+                id:2,
+                title:"No limit on campaigns, keywords, etc."
+              },
+              {
+                id:3,
+                title:"Dedicated and direct contact"
+              },
+              {
+                id:4,
+                title:"Continuous reporting with Google Data Studio"
+              },
+              {
+                id:5,
+                title:"Comprehensive telephone support"
+              },
+              {
+                id:6,
+                title:"Including click fraud prevention"
+              },
+            ]
         },
         {
             id:2,
-            title:"Интернет магазин",
-            price:899,
+            title:"Enterprise",
+            price:"30%",
             subtitle:"",
-            ruleTextOne:"Гибкая система управления товарами",
-            ruleTextTwo:"Оптимизированная структура сайта",
-            ruleTextThree:"Интеграция с платежными системами"
+            texts:[
+              {
+                id:0,
+                title:"more than € 25,000 monthly ad spend"
+              },
+              {
+                id:1,
+                title:"Campaign management based on the Google Marketing Platform"
+              },
+              {
+                id:2,
+                title:"Real time data for campaign optimization"
+              },
+              {
+                id:3,
+                title:"Dedicated and direct contact"
+              },
+              {
+                id:4,
+                title:"Continuous reporting with Google Data Studiov"
+              },
+              {
+                id:5,
+                title:"Unlimited phone support"
+              },
+              {
+                id:6,
+                title:"Including click fraud prevention"
+              },
+              {
+                id:7,
+                title:"Regular strategy meetings"
+              },
+            ]
         },
     ],
 
@@ -81,7 +159,7 @@ export const data = {
         img: img8,
         title: "Agro Finans Lizing",
         description:
-          "Agro Finans Lizing -  лидирующая компания в Узбекистане который занимается лизингом электромобилей.",
+          "Agro Finans Leasing - Leading company in Uzbekistan specializing in electric vehicle leasing.",
         link: "https://agrofinanslizing.uz/",
       },
       {
@@ -89,7 +167,7 @@ export const data = {
         img: img9,
         title: "Pomodoro",
         description:
-          "Chef Pomodoro - Компания специализируется на продаже товаров для приготовления пиццы по всему миру.",
+          "Chef Pomodoro - A global company specializing in the sale of pizza-making products.",
         link: "https://www.chefpomodoro.com/",
       },
        
@@ -98,7 +176,7 @@ export const data = {
           img: img3,
           title: "EXANTE",
           description:
-            "EXANTE -  wealthtech компания, которая предоставляет централизованные инвестиционные решения и инфраструктуру для финансовых институтов.",
+            "EXANTE - A wealthtech company providing centralized investment solutions and infrastructure for financial institutions.",
           link: "https://exante.eu/",
         },
         {
@@ -106,7 +184,7 @@ export const data = {
           img: img4,
           title: "AllHDD",
           description:
-            "ALLHDD.COM —  компания из Нью-Йорка, специализирующаяся на решениях в области серверов и сетевого оборудования, ориентированных на корпоративные дата-центры и сети.",
+            "ALLHDD.COM - A New York-based company specializing in server and networking solutions tailored for enterprise data centers and networks.",
           link: "https://www.allhdd.com/",
         },
         {
@@ -114,7 +192,7 @@ export const data = {
           img: img5,
           title: "AVATRADE",
           description:
-            "AvaTrade - является пионером онлайн-торговли с 2006 года. Компания была создана совместными усилиями финансовых специалистов и экспертов в сфере интернет-коммерции с целью обеспечения наилучших условий работы для частных трейдеров.",
+            "AvaTrade - A pioneer in online trading since 2006. The company was established by a team of financial specialists and e-commerce experts to provide optimal trading conditions for individual traders.",
           link: "https://www.avatrade.com/",
         },
         {
@@ -122,7 +200,7 @@ export const data = {
           img: img2,
           title: "CEDRUS",
           description:
-            "Cedrus Residence -  компания занимается роскошным апартаментами в Швейцарии, расположенные в живописном месте Тичино между берегами озера и зелеными долинами Альп.",
+            "Cedrus Residence - A company specializing in luxury apartments in Switzerland, located in the picturesque region of Ticino between the shores of the lake and the green valleys of the Alps.",
           link: "https://www.cedrus-residence.ch/it/",
         },
         {
@@ -130,7 +208,7 @@ export const data = {
           img: img7,
           title: "SAXO",
           description:
-            "Saxo Bank - это всемирный инвестиционная банк, которой доверяют более 1 000 000 клиентов по всему миру.",
+            "Saxo Bank - A global investment bank trusted by over 1,000,000 clients worldwide.",
           link: "https://www.home.saxo/",
         },
         {
@@ -138,7 +216,7 @@ export const data = {
           img: img1,
           title: "UNHCR",
           description:
-            "UNHCR - Агентство ООН по делам беженцев международная организация, целью которой является спасение жизней.",
+            "UNHCR - The UN Refugee Agency is an international organization dedicated to saving lives.",
           link: "https://www.unhcr.org/",
         },
         {
@@ -146,7 +224,7 @@ export const data = {
           img: img6,
           title: "TRUSTPILOT",
           description:
-            "Trustpilot была основана в 2007 году с целью создания независимой валюты доверия. Это - цифровая платформа, которая объединяет предприятия и потребителей, укрепляя доверие и вдохновляя на сотрудничество.",
+          "Trustpilot was founded in 2007 with the goal of creating an independent currency of trust. It is a digital platform that connects businesses and consumers, building trust and inspiring collaboration.",
           link: "https://www.trustpilot.com/",
         },
         

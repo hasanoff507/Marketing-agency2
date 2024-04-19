@@ -170,7 +170,7 @@ export const Button = styled.button`
   cursor: pointer;
   display: block;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
 
   &:hover {
     background-color: #49cb86;

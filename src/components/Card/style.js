@@ -5,16 +5,32 @@ export const Wrapper =styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    margin-bottom: 2rem;
-    width: 320px;
     display: flex;
     flex-direction: column;
-    border-radius: 0.25rem;
     background-color: #0080ff;
-    padding: 1.5rem;
-    border-radius: 16px;
+    /* width: 40%; */
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    
+    padding: 30px;
+    &:nth-child(1){
+      width: 30%;
+    }
+    &:nth-child(2){
+      width: 30%;
+    }
+    &:nth-child(3){
+      width: 30%;
+    }
+    @media screen and (max-width: 1200px){
+      width: 350px !important;
+      margin: 20px 0;
+    }
+    
     @media screen and (max-width: 600px){
-      width: 100%;
+      width: 90% !important;
     }
 
   .header {
@@ -23,11 +39,12 @@ export const Wrapper =styled.div`
   }
 
   .title {
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 2.2rem;
     font-weight: 700;
     margin-bottom: 10px;
     color: #fff;
+    text-align: center;
   }
 
   .price {

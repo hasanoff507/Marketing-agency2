@@ -1,14 +1,14 @@
 export const serviceData = [
     {
       id:0,
-      name:"Лендинг",
+      name:"Google Ads",
     },
     {
       id:1,
-      name:"Бизнес сайт",
+      name:"Facebook Ads",
     },
     {
       id:2,
-      name:"Интернет магазин",
+      name:"SEO",
     },
   ]

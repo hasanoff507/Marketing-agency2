@@ -24,9 +24,9 @@ const Projects = () => {
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Наши замечательные проекты</h1>
+            <h1 className="font40 extraBold">Clients collaborating with Us</h1>
             <p className={"subtitle"}>
-            В Adigmo мы стремимся к тому, чтобы каждый веб-сайт был не просто функциональным и привлекательным, но и отражал уникальность бренда нашего клиента. Ниже представлены некоторые из наших замечательных проектов, которые мы создали в тесном сотрудничестве с нашими клиентами, превратив их идеи в успешные онлайн-платформы.
+            Partnering with us for tailored marketing solutions and exceptional results. Hear from our clients who trust us to drive growth and engagement for their businesses.
             </p>
           </HeaderInfo>
           <div className="row textCenter">

@@ -57,6 +57,7 @@ export const UlWrapper = styled.ul`
   display: flex;
   li{
     font-size: 16px;
+    font-weight: 400 !important;
     
   }
   

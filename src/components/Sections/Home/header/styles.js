@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     height: 130vh;
     padding-bottom: 50px;
   }
-  
+
   @media screen and (max-width: 600px) {
     height: 100vh;
     padding-bottom: 50px;
@@ -17,15 +17,15 @@ export const Wrapper = styled.div`
   }
 `;
 export const HeaderVideo = styled.video`
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-	top: 0;
-    left: 0;
-	position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  top: 0;
+  left: 0;
+  position: absolute;
   z-index: -1;
-    filter: blur(0.5px);
+  filter: blur(0.5px);
 `;
 export const Container = styled.div`
   height: 100%;
@@ -79,10 +79,12 @@ export const RightSide = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 56px;
+  font-family: "Roboto" !important;
+  font-style: normal;
+  font-size: 64px;
   color: #fff;
-  font-weight: 700;
-  width: 90%;
+  font-weight: 800;
+  width: 100%;
   margin: auto;
   margin-top: 140px;
   @media screen and (max-width: 1500px) {
@@ -101,6 +103,11 @@ export const Title = styled.div`
   }
   span {
     color: #0080ff;
+    font-family: "Roboto" !important;
+  }
+  .under-title {
+    font-family: "Roboto" !important;
+  
   }
 `;
 
@@ -117,7 +124,7 @@ export const Form = styled.form`
   p {
     color: #fff;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     padding-left: 5px;
   }
 
@@ -131,7 +138,6 @@ export const Form = styled.form`
 export const FormContainer = styled.div`
   width: 80%;
   margin: auto;
-
 
   .input-numb {
     color: #fff !important;
@@ -177,7 +183,7 @@ export const Input = styled.input`
   border-radius: 5px;
   padding: 11px 12px;
   background-color: rgb(42, 83, 162);
-  -webkit-text-fill-color:#fff;
+  -webkit-text-fill-color: #fff;
   @media screen and (max-width: 1500px) {
     width: 250px;
   }
@@ -209,7 +215,7 @@ export const SelectInput = styled.select`
   line-height: 70px;
   font-size: 15px;
   font-weight: 500;
-  -webkit-text-fill-color:#fff;
+  -webkit-text-fill-color: #fff;
 
   @media screen and (max-width: 1500px) {
     width: 98%;
@@ -229,8 +235,7 @@ export const SelectInput = styled.select`
 export const Option = styled.option`
   cursor: pointer;
   font-size: 16px;
-  -webkit-text-fill-color:#fff;
-
+  -webkit-text-fill-color: #fff;
 `;
 
 export const Button = styled.button`
@@ -283,12 +288,12 @@ export const MobileBtn = styled.div`
   @media only screen and (max-width: 600px) {
     display: block;
     color: #000;
-    font-weight: 600;
+    font-weight: 500;
     width: fit-content;
     background-color: #fff;
     border-radius: 30px;
-    font-size: 20px;
-    padding: 10px 55px;
+    font-size:16px;
+    padding: 10px 35px;
     margin-top: 27px;
     margin-left: 30px;
   }
