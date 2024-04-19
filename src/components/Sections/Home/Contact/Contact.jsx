@@ -29,15 +29,15 @@ const  Contact = () => {
         console.log(values)
         const errors = {};
         if (!values.name) {
-            errors.name = "Имя обязательно!";
+            errors.name = "Name required!";
         } else if (values.name.length < 4) {
-            errors.name = "Имя должно содержать не менее 4 символов!";
-        } else if (values.number.length == "" ) {
-            errors.number = "Номер обязательно ";
+            errors.name = "!";
+        } else if (values.number.length == "Name must contain at least 4 characters." ) {
+            errors.number = "Phone number is required!";
         } else if (currentNumber.length < 12) {
 
             errors.number =
-                "Номер телефона должен состоять не менее чем из 12 символов!";
+                "Phone number must consist of at least 12 characters!";
         } else {
             HttpRequest({
                 e,
@@ -58,19 +58,19 @@ const  Contact = () => {
 
   return (
     <Wrapper id="contact">
-      <div className="lightBg">
+      <div >
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold flexCenter">Давайте свяжемся с вами</h1>
+            <h1 className="font40 extraBold flexCenter">Let's Get in Touch</h1>
             <p className="font19 flexCenter subtitle ">
-            Ваши идеи и бизнес-цели заслуживают выдающегося воплощения в цифровом мире. В Adigmo мы готовы помочь вам в этом.Оставьте свои контактные данные в форме ниже, и наш специалист свяжется с вами в ближайшее время для обсуждения вашего проекта.
+            Your ideas and business goals deserve outstanding digital execution. At Adigmo, we're ready to help. Provide your contact details below, and one of our specialists will get in touch soon to discuss your project.
             </p>
           </HeaderInfo>
               <Form onSubmit={handleSubmit} >
                   <p
                       style={formErrors.name ? { color: "red" } : { color: "black" }}
                   >
-                      {formErrors.name ? formErrors.name : "Имя и фамилия:"}
+                      {formErrors.name ? formErrors.name : "First and Last Name:"}
                   </p>
                 <input 
                 type="text" id="fname" name="fname"   className="font20 extraBold"
@@ -83,13 +83,13 @@ const  Contact = () => {
                           formErrors.number ? { color: "red" } : { color: "black" }
                       }
                   >
-                      {formErrors.number ? formErrors.number : "Номер телефона"}
+                      {formErrors.number ? formErrors.number : "Phone Number"}
                   </p>
                  <PatternFormat
                   className="font20 extraBold patternof"
                  value={state.number}
                  type={"tel"}
-                 placeholder={"Номер телефона"}
+                 placeholder={"Phone Number"}
                  format="+998(##)###-##-##"
                  allowEmptyFormatting
                  mask="_"
