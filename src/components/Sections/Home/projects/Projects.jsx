@@ -4,6 +4,7 @@ import ProjectBox from "../../../ProjectBox/ProjectBox";
 // Assets
 import { HeaderInfo, Wrapper, Button } from "./styles";
 import {data} from "../../../../data"
+import Text from "../../../../language/langManager";
 
 const Projects = () => {
   const [visible, setVisible] = useState(6);
@@ -24,9 +25,12 @@ const Projects = () => {
       <div className="whiteBg">
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold">Clients collaborating with Us</h1>
+            <h1 className="font40 extraBold">
+              <Text id={"clientTitle"}/>
+            </h1>
             <p className={"subtitle"}>
-            Partnering with us for tailored marketing solutions and exceptional results. Hear from our clients who trust us to drive growth and engagement for their businesses.
+            <Text id={"clientSubtitle"}/>
+
             </p>
           </HeaderInfo>
           <div className="row textCenter">
@@ -49,7 +53,9 @@ const Projects = () => {
           <div className="row flexCenter">
             {
              showSeeMore && (
-              <Button onClick={handleLoadMore}> Загрузить Еще </Button>
+              <Button onClick={handleLoadMore}> 
+              <Text id={"buttonMore"}/>
+               </Button>
              )
             }
           </div>

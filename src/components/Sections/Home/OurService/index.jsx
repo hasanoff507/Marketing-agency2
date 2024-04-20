@@ -4,7 +4,7 @@ import {ReactComponent as GoogleSvg} from "../../../../assets/serviceItems/servi
 import {ReactComponent as FacebookSvg} from "../../../../assets/serviceItems/serviceLogo/facebook-ads.svg";
 import {ReactComponent as BingSvg} from "../../../../assets/serviceItems/serviceLogo/bing-ads-logo.svg";
 import {ReactComponent as SeoSvg} from "../../../../assets/serviceItems/serviceLogo/smart-seo-seeklogo.svg";
-
+import Text from "../../../../language/langManager"
 import PopUp from "../../../popUp";
 
 const OurService = () => {
@@ -15,9 +15,11 @@ const OurService = () => {
       {popUp ? <PopUp popUp={popUp}  setPopUp={setPopUp} /> : ""}
 
             <Container>
-                <h1 className="font40 extraBold">Marketing Solutions<span></span></h1>
+                <h1 className="font40 extraBold">
+                    <Text id={"ourServiceTitle"}/>
+                    <span></span></h1>
                 <p className={"subtitle"}>
-                Unlock your brand's potential with our comprehensive marketing solutions. From precise Google Ads and targeted Facebook campaigns to effective SEO strategies, we help you connect, engage, and grow your audience.
+                <Text id={"ourServiceSubtitle"}/>
                 </p>
                 <ServiceWrapper>
                     <ServiceBox>
@@ -28,9 +30,12 @@ const OurService = () => {
                             Google Ads
                         </p>
                         <p className={"text"}>
-                        Drive targeted traffic to your website and boost conversions with Google Ads. Our expert team creates and manages impactful campaigns, ensuring your ads reach the right audience at the right time.
+                            <Text id={"ourServiceCardText1"}/>
                         </p>
-                        <Button className="bg-dark" onClick={() => setPopUp(true)}>Заказать</Button>
+                        <Button className="bg-dark" onClick={() => setPopUp(true)}>
+                        <Text id={"homeButton"}/>
+
+                        </Button>
                     </ServiceBox>
                     <ServiceBox className="bg-dark">
                         <div className={"svg-wrapper"}>
@@ -40,9 +45,12 @@ const OurService = () => {
                             FaceBook Ads
                         </p>
                         <p className={"text"}>
-                        Engage your audience with tailored Facebook Ads. Our team designs eye-catching campaigns that connect with your target market, driving more traffic, leads, and conversions for your business.
+                        <Text id={"ourServiceCardText2"}/>
                         </p>
-                        <Button  onClick={() => setPopUp(true)}>Заказать</Button>
+                        <Button className="bg-dark" onClick={() => setPopUp(true)}>
+                        <Text id={"homeButton"}/>
+
+                        </Button>
                     </ServiceBox>
                     
                 </ServiceWrapper>
@@ -55,9 +63,14 @@ const OurService = () => {
                             Bing Ads
                         </p>
                         <p className={"text"}>
-                        Maximize your online presence with Bing Ads. Our team crafts targeted campaigns to connect with your audience and drive traffic, helping you reach a broader market and achieve your business goals.
+                        <Text id={"ourServiceCardText3"}/>
+
                         </p>
-                        <Button onClick={() => setPopUp(true)}>Заказать</Button>
+    
+                        <Button className="bg-dark" onClick={() => setPopUp(true)}>
+                        <Text id={"homeButton"}/>
+
+                        </Button>
                     </ServiceBox>
                     <ServiceBox>
                         <div className={"svg-wrapper"}>
@@ -67,9 +80,13 @@ const OurService = () => {
                             SEO
                         </p>
                         <p className={"text"}>
-                        Boost your online visibility and organic traffic with expert SEO strategies. We optimize your website to rank higher on search engines, helping you attract more qualified leads and grow your business.
+                        <Text id={"ourServiceCardText4"}/>
+
                         </p>
-                        <Button className="bg-dark" onClick={() => setPopUp(true)}>Заказать</Button>
+                        <Button className="bg-dark" onClick={() => setPopUp(true)}>
+                        <Text id={"homeButton"}/>
+
+                        </Button>
                     </ServiceBox>
                 </ServiceWrapper>
                 

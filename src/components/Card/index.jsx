@@ -1,5 +1,6 @@
 import React from "react";
 import { Wrapper } from "./style";
+import Text from "../../language/langManager"
 const Card = ({ title, price, subtitle, texts, click }) => {
   return (
     <Wrapper>
@@ -30,7 +31,7 @@ const Card = ({ title, price, subtitle, texts, click }) => {
           })}
         </ul>
         <button type="button" onClick={click} className="action">
-          Get Started
+         <Text id="homeButton"/>
         </button>
       </div>
     </Wrapper>

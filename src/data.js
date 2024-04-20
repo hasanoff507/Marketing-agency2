@@ -8,69 +8,94 @@ import img6 from "./assets/main/portfolio/612.png";
 import img7 from "./assets/main/portfolio/02.jpg";
 import img8 from "./assets/main/portfolio/13.jpg";
 import img9 from "./assets/main/portfolio/12.jpg";
+import Text from "./language/langManager";
+import flag1 from "./assets/img/navbar/uzbekistan-flag-icon.png"
+import flag2 from "./assets/img/navbar/russia-flag-icon.png"
+import flag3 from "./assets/img/navbar/united-kingdom-flag-icon.png"
+
 
 
 
 export const data = {
+  languages:[
+   {
+    id:0,
+    title:"UZ",
+    img:flag1
+   },
+   {
+    id:1,
+    title:"RU",
+    img:flag2
+
+   },
+   {
+    id:2,
+    title:"ENG",
+    img:flag3
+
+   }
+
+  ],
     navData:[
       {
         id:0,
         link:"home",
-        name:"Home"
+        title:<Text id={"navbarTitle1"}/>
     },
     {
         id:1,
         link:"our-service",
-        name:"Service"
+        title:<Text id={"navbarTitle2"}/>
     },
     {
         id:2,
         link:"pricing",
-        name:"Price"
+        title:<Text id={"navbarTitle3"}/>
     },
     {
         id:3,
         link:"projects",
-        name:"Projects "
+        title:<Text id={"navbarTitle4"}/>
     },
     {
         id:4,
         link:"AboutUs",
-        name:"About Us "
+        title:<Text id={"navbarTitle5"}/>
     },
     {
         id:6,
         link:"contact",
-        name:"Contact"
+        title:<Text id={"navbarTitle6"}/>
     },
     ],
 
     price:[
         {
             id:0,
-            title:"Default",
+            title:<Text id="priceCardtitle1"/>,
             price:"950",
             subtitle:"",
             texts:[
               {
                 id:0,
-                title:"Complete campaign management"
+                title:<Text id="priceCardtext1"/>
               },
               {
                 id:1,
-                title:"Complete campaign management"
+                title:<Text id="priceCardtext2"/>
               },
               {
                 id:2,
-                title:"No limit on campaigns, keywords, etc."
+                title:<Text id="priceCardtext3"/>
               },
               {
                 id:3,
-                title:"Dedicated and direct contact"
+                title:<Text id="priceCardtext4"/>
               },
               {
                 id:4,
-                title:"Continuous reporting with Google Data Studio"
+                title:<Text id="priceCardtext5"/>
               },
               
             ]
@@ -83,31 +108,31 @@ export const data = {
             texts:[
               {
                 id:0,
-                title:"from €6,501 monthly advertising spend"
+                title:<Text id="priceCardtext1"/>
               },
               {
                 id:1,
-                title:"Complete campaign management"
+                title:<Text id="priceCardtext2"/>
               },
               {
                 id:2,
-                title:"No limit on campaigns, keywords, etc."
+                title:<Text id="priceCardtext3"/>
               },
               {
                 id:3,
-                title:"Dedicated and direct contact"
+                title:<Text id="priceCardtext4"/>
               },
               {
                 id:4,
-                title:"Continuous reporting with Google Data Studio"
+                title:<Text id="priceCardtext5"/>
               },
               {
                 id:5,
-                title:"Comprehensive telephone support"
+                title:<Text id="priceCardtext6"/>
               },
               {
                 id:6,
-                title:"Including click fraud prevention"
+                title:<Text id="priceCardtext7"/>
               },
             ]
         },
@@ -119,35 +144,35 @@ export const data = {
             texts:[
               {
                 id:0,
-                title:"more than € 25,000 monthly ad spend"
+                title:<Text id="priceCardtext1"/>
               },
               {
                 id:1,
-                title:"Campaign management based on the Google Marketing Platform"
+                title:<Text id="priceCardtext2"/>
               },
               {
                 id:2,
-                title:"Real time data for campaign optimization"
+                title:<Text id="priceCardtext3"/>
               },
               {
                 id:3,
-                title:"Dedicated and direct contact"
+                title:<Text id="priceCardtext4"/>
               },
               {
                 id:4,
-                title:"Continuous reporting with Google Data Studiov"
+                title:<Text id="priceCardtext5"/>
               },
               {
                 id:5,
-                title:"Unlimited phone support"
+                title:<Text id="priceCardtext6"/>
               },
               {
                 id:6,
-                title:"Including click fraud prevention"
+                title:<Text id="priceCardtext7"/>
               },
               {
                 id:7,
-                title:"Regular strategy meetings"
+                title:<Text id="priceCardtext8"/>
               },
             ]
         },
@@ -158,8 +183,7 @@ export const data = {
         id: 0,
         img: img8,
         title: "Agro Finans Lizing",
-        description:
-          "Agro Finans Leasing - Leading company in Uzbekistan specializing in electric vehicle leasing.",
+        description:<Text id="clientCardText0"/>,
         link: "https://agrofinanslizing.uz/",
       },
       {
@@ -167,7 +191,7 @@ export const data = {
         img: img9,
         title: "Pomodoro",
         description:
-          "Chef Pomodoro - A global company specializing in the sale of pizza-making products.",
+        <Text id="clientCardText1"/>,
         link: "https://www.chefpomodoro.com/",
       },
        
@@ -176,7 +200,7 @@ export const data = {
           img: img3,
           title: "EXANTE",
           description:
-            "EXANTE - A wealthtech company providing centralized investment solutions and infrastructure for financial institutions.",
+          <Text id="clientCardText2"/>,
           link: "https://exante.eu/",
         },
         {
@@ -184,7 +208,7 @@ export const data = {
           img: img4,
           title: "AllHDD",
           description:
-            "ALLHDD.COM - A New York-based company specializing in server and networking solutions tailored for enterprise data centers and networks.",
+          <Text id="clientCardText3"/>,
           link: "https://www.allhdd.com/",
         },
         {
@@ -192,7 +216,7 @@ export const data = {
           img: img5,
           title: "AVATRADE",
           description:
-            "AvaTrade - A pioneer in online trading since 2006. The company was established by a team of financial specialists and e-commerce experts to provide optimal trading conditions for individual traders.",
+          <Text id="clientCardText4"/>,
           link: "https://www.avatrade.com/",
         },
         {
@@ -200,7 +224,7 @@ export const data = {
           img: img2,
           title: "CEDRUS",
           description:
-            "Cedrus Residence - A company specializing in luxury apartments in Switzerland, located in the picturesque region of Ticino between the shores of the lake and the green valleys of the Alps.",
+          <Text id="clientCardText5"/>,
           link: "https://www.cedrus-residence.ch/it/",
         },
         {
@@ -208,7 +232,7 @@ export const data = {
           img: img7,
           title: "SAXO",
           description:
-            "Saxo Bank - A global investment bank trusted by over 1,000,000 clients worldwide.",
+          <Text id="clientCardText6"/>,
           link: "https://www.home.saxo/",
         },
         {
@@ -216,7 +240,7 @@ export const data = {
           img: img1,
           title: "UNHCR",
           description:
-            "UNHCR - The UN Refugee Agency is an international organization dedicated to saving lives.",
+          <Text id="clientCardText7"/>,
           link: "https://www.unhcr.org/",
         },
         {
@@ -224,7 +248,7 @@ export const data = {
           img: img6,
           title: "TRUSTPILOT",
           description:
-          "Trustpilot was founded in 2007 with the goal of creating an independent currency of trust. It is a digital platform that connects businesses and consumers, building trust and inspiring collaboration.",
+          <Text id="clientCardText8"/>,
           link: "https://www.trustpilot.com/",
         },
         

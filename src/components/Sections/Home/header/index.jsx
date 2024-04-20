@@ -25,6 +25,8 @@ import {
   HeaderVideo,
 } from "./styles";
 
+import Text from "../../../../language/langManager"
+
 const Header = () => {
   // don't  edit this code
   const [popUp, setPopUp] = useState(false);
@@ -54,15 +56,14 @@ const Header = () => {
     console.log(values)
     const errors = {};
     if (!values.name) {
-      errors.name = "Name required!";
+      errors.name = <Text id={"homeFormAlertTitle1"}/>;
     } else if (values.name.length < 4) {
-      errors.name = "The name must contain at least 4 characters!";
+      errors.name = <Text id={"homeFormAlertTitle3"}/>;
     } else if (values.number.length == "" ) {
-      errors.number = "Phone Number required";
+      errors.number = <Text id={"homeFormAlertTitle2"}/>;
     } else if (currentNumber.length < 12) {
     
-      errors.number =
-        "The phone number must consist of at least 12 characters!";
+      errors.number = <Text id={"homeFormAlertTitle4"}/>
     } else {
       HttpRequest({
         e,
@@ -88,7 +89,7 @@ const Header = () => {
       <Container>
         <LeftSide>
           <Title>
-          Unlock Your Growth at
+          <Text id={"homeHeaderTitle1"}/>
             <div>
               <TypeAnimation
                 sequence={[
@@ -96,6 +97,8 @@ const Header = () => {
                   2000, // Waits 1s
                   "Facebook Ads", // Deletes 'One' and types 'Two'
                   4000, // Waits 2s
+                  "Bing Ads",
+                  4000,
                   "SEO",
                   4000,
                   // Types 'Three' without deleting 'Two'
@@ -107,7 +110,9 @@ const Header = () => {
                 style={{ fontSize: "", display: "inline-block" }}
               />
             </div>
-            <div className="under-title">with Adigmo</div>
+            <div className="under-title"> 
+            <Text id={"homeHeaderTitle2"}/>
+             </div>
           </Title>
           <MobileBtn onClick={() => setPopUp(true)}>Get Started</MobileBtn>
         </LeftSide>
@@ -115,17 +120,19 @@ const Header = () => {
         <RightSide>
           <Form onSubmit={handleSubmit}>
             <FormContainer>
-              <FormTitle> Connect with Us</FormTitle>
+              <FormTitle> 
+              <Text id={"homeHeaderFormTitle"}/>
+              </FormTitle>
               <p
                 style={formErrors.name ? { color: "red" } : { color: "#fff" }}
               >
-                {formErrors.name ? formErrors.name : "Name"}
+                {formErrors.name ? formErrors.name : <Text id={"homeHeaderInputTitle"}/>}
               </p>
               <Input
                 className={"input-numb"}
                 value={state.name}
                 type={"Name"}
-                placeholder={"Name"}
+                placeholder={Text({id:"homeHeaderInputTitle"})}
                 maxLength={30}
                 onChange={(e) =>
                   setState({ ...state, name: e.target.value.trim() })
@@ -136,7 +143,7 @@ const Header = () => {
                   formErrors.number ? { color: "red" } : { color: "#fff" }
                 }
               >
-                {formErrors.number ? formErrors.number : "Phone Number"}
+                {formErrors.number ? formErrors.number : <Text id={"homeHeaderInputTitle1"}/>}
               </p>
 
               <PatternFormat
@@ -151,16 +158,20 @@ const Header = () => {
                 onChange={(e) => setState({ ...state, number: e.target.value })}
               />
 
-              <p>Email Address</p>
+              <p>
+              <Text id={"homeHeaderInputTitle2"}/>
+              </p>
               <Input
                 className={"numb"}
                 type="email"
-                placeholder={"Email Address "}
+                placeholder={Text({id:"homeHeaderInputTitle2"})}
                 value={state.email}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
               />
 
-              <p>Service</p>
+              <p>
+              <Text id={"homeHeaderInputTitle3"}/>
+              </p>
 
               <SelectInput
                 onChange={(e) =>
@@ -174,7 +185,9 @@ const Header = () => {
                 ))}
               </SelectInput>
             </FormContainer>
-            <Button> Get Started </Button>
+            <Button> 
+            <Text id={"homeButton"}/>
+            </Button>
           </Form>
         </RightSide>
       </Container>

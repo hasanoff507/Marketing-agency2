@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { HttpRequest } from "../../../../hooks/httpRequest";
 import { PatternFormat } from 'react-number-format';
 import {useNavigate} from "react-router-dom";
+import Text from "../../../../language/langManager";
 
 const  Contact = () => {
 
@@ -29,15 +30,13 @@ const  Contact = () => {
         console.log(values)
         const errors = {};
         if (!values.name) {
-            errors.name = "Name required!";
+            errors.name = <Text id={"homeFormAlertTitle1"}/>;
         } else if (values.name.length < 4) {
-            errors.name = "!";
+            errors.name = <Text id={"homeFormAlertTitle3"}/>;
         } else if (values.number.length == "Name must contain at least 4 characters." ) {
-            errors.number = "Phone number is required!";
+            errors.number = <Text id={"homeFormAlertTitle3"}/>;
         } else if (currentNumber.length < 12) {
-
-            errors.number =
-                "Phone number must consist of at least 12 characters!";
+            errors.number = <Text id={"homeFormAlertTitle4"}/>
         } else {
             HttpRequest({
                 e,
@@ -61,16 +60,18 @@ const  Contact = () => {
       <div >
         <div className="container">
           <HeaderInfo>
-            <h1 className="font40 extraBold flexCenter">Let's Get in Touch</h1>
+            <h1 className="font40 extraBold flexCenter">
+              <Text id={"contactTitle"}/>
+            </h1>
             <p className="font19 flexCenter subtitle ">
-            Your ideas and business goals deserve outstanding digital execution. At Adigmo, we're ready to help. Provide your contact details below, and one of our specialists will get in touch soon to discuss your project.
+            <Text id={"contactSubtitle"}/>
             </p>
           </HeaderInfo>
               <Form onSubmit={handleSubmit} >
                   <p
                       style={formErrors.name ? { color: "red" } : { color: "black" }}
                   >
-                      {formErrors.name ? formErrors.name : "First and Last Name:"}
+                      {formErrors.name ? formErrors.name :<Text id={"fullName"}/> }
                   </p>
                 <input 
                 type="text" id="fname" name="fname"   className="font20 extraBold"
@@ -97,7 +98,9 @@ const  Contact = () => {
                  onChange={(e) => setState({ ...state, number: e.target.value })}
                         />
                 <SumbitWrapper className="flex">
-                  <Button >Отправить </Button>
+                  <Button >
+                    <Text id={"buttonSend"}/>
+                  </Button>
                 </SumbitWrapper>
               </Form>
 

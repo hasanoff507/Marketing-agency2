@@ -144,3 +144,23 @@ export const NavbarButton = styled.div`
     display: none;
   }
 `;
+export const LangWrapper = styled.div`
+
+select {
+  /* background-color: #ffffff; */
+  color: #000000;
+  padding: 10px 15px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+
+    option {
+  color: #000000;
+  outline: none;
+    }
+  }
+`;
+export const LangButton = styled.div`
+  
+`;

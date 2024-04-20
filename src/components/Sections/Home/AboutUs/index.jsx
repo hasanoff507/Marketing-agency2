@@ -1,28 +1,16 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Content,
-  InternalWrapper,
-  Row,
-  SvgContainer,
-  Title,
-  Wrapper,
-} from "./style";
-import { ReactComponent as TechSvg } from "../../../../assets/serviceItems/technology.svg";
-import { ReactComponent as AdoptionSvg } from "../../../../assets/serviceItems/responsive.svg";
-import { ReactComponent as DesignSvg } from "../../../../assets/serviceItems/creative.svg";
-import { ReactComponent as SettingSvg } from "../../../../assets/serviceItems/web sey.svg";
-import { ReactComponent as LoopSvg } from "../../../../assets/serviceItems/loop.svg";
-import { ReactComponent as BoxSvg } from "../../../../assets/serviceItems/box.svg";
+import { Container, Content, InternalWrapper, Title, Wrapper } from "./style";
 import aboutUsimg from "../../../../assets/img/AboutUs.jpg";
+import Text from "../../../../language/langManager";
 
 const AboutUs = () => {
   return (
     <Wrapper id={"AboutUs"}>
       <Container>
         <Title>
-          <h1 className="font40 extraBold flexCenter">About Us</h1>
+          <h1 className="font40 extraBold flexCenter">
+            <Text id={"aboutUsTitle"} />
+          </h1>
         </Title>
       </Container>
       <InternalWrapper>
@@ -33,37 +21,36 @@ const AboutUs = () => {
         </Content>
         <Content>
           <div className="text-box">
-            <div className="title">About Our Agency</div>
+            <div className="title">
+              <Text id={"aboutUSTextBoxTitle"} />
+            </div>
             <p className="subtitle">
-              Welcome to our About Us section! We are a dedicated digital
-              marketing agency committed to helping your business thrive in the
-              online landscape. With over 17 years of experience, our team of
-              expert marketers has successfully executed more than 1,000
-              projects across a variety of niches and countries.
+              <Text id={"aboutUSTextBoxText1"} />
             </p>
             <div className="text">
-              Our mission is to empower your brand, elevate your online
-              presence, and drive tangible results. We take pride in our
-              tailored strategies and innovative approaches to ensure your
-              success. As your trusted partners, we work closely with you to
-              understand your goals and deliver exceptional outcomes.
+              <Text id={"aboutUSTextBoxText2"} />
             </div>
             <p className="text">
-              Join us on this journey and discover the difference our expertise
-              can make in your business growth. Let’s achieve success together!
+              <Text id={"aboutUSTextBoxText3"} />
             </p>
             <div className="statistic-wrapper">
               <div className="box">
                 <div className="box-title">1000+</div>
-                <div className="box-number">Довольных Клиентов</div>
+                <div className="box-number">
+                  <Text id={"aboutUsStatisticText1"} />
+                </div>
               </div>
               <div className="box">
                 <div className="box-title">15+</div>
-                <div className="box-number">Лет Опыта</div>
+                <div className="box-number">
+                  <Text id={"aboutUsStatisticText2"} />
+                </div>
               </div>
               <div className="box">
                 <div className="box-title">25+</div>
-                <div className="box-number">Зарубежных Проектов</div>
+                <div className="box-number">
+                  <Text id={"aboutUsStatisticText3"} />
+                </div>
               </div>
             </div>
           </div>

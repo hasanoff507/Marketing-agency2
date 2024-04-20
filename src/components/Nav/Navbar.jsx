@@ -1,22 +1,50 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-scroll";
 // Components
 import Sidebar from "../Sidebar/index";
 // Assets
-import {ReactComponent as LogoSvg }from "../../assets/logo/adig.svg";
+import { ReactComponent as LogoSvg } from "../../assets/logo/adig.svg";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
-import {Button, Drawer, NavbarButton, NavInner, UlWrapper,Wrapper} from "./styles";
+import {
+  Button,
+  Drawer,
+  LangWrapper,
+  NavbarButton,
+  NavInner,
+  UlWrapper,
+  Wrapper,
+  LangSecondBnt,
+  LangButton,
+} from "./styles";
 
-const  Navbar = () => {
+import { data } from "../../data";
+// language
+import langs from "../../Constants/lang";
+import Text from "../../language/langManager";
+import {
+  switchLang,
+  switchToRussian,
+  switchToUzbek,
+  switchToEnglish,
+} from "../../redux/modules/lang/langAction";
+
+const Navbar = () => {
   const [y, setY] = useState(window.scrollY);
-
+  const dispatch = useDispatch();
+  const [isRed, setIsRed] = useState(true);
+  const [blue, setBlue] = useState(false);
   const [open, setOpen] = useState(false);
+
+  // navbar toggle function
   const showDrawer = () => {
     setOpen(true);
   };
+
   const onClose = () => {
     setOpen(false);
   };
+
   useEffect(() => {
     window.addEventListener("scroll", () => setY(window.scrollY));
     return () => {
@@ -24,66 +52,100 @@ const  Navbar = () => {
     };
   }, [y]);
 
+  const state = useSelector((state) => state);
+  const lang = state.lang;
+  const { UZBEK, RUSSIAN, ENGLISH } = langs;
+
+  const langChanger = (item) => {
+    // const handleTwo = () => {
+    //   setIsRed(true);
+    //   setBlue(lang === UZBEK ? false : "");
+    // };
+    // handleTwo();
+    if ("UZ" === item) {
+      dispatch(switchToUzbek());
+    } else if ("RU" === item) {
+      dispatch(switchToRussian());
+    } else {
+      dispatch(switchToEnglish());
+    }
+  };
+
   return (
     <>
-      <Drawer  open={open}>
+      <Drawer open={open}>
         <Sidebar onClose={onClose} />
       </Drawer>
 
       <Wrapper
-          className="flexCenter animate "
-          style={y > 100 ? { boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)",backgroundColor:"#0080ff"} : { height: "80px" }}>
-
+        className="flexCenter animate "
+        style={
+          y > 100
+            ? {
+                boxShadow: "0 2px 4px 0 rgba(0,0,0,.2)",
+                backgroundColor: "#0080ff",
+              }
+            : { height: "80px" }
+        }
+      >
         <NavInner>
-
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <div className="nav-logo">
-              <LogoSvg/>
+              <LogoSvg />
             </div>
           </Link>
-          <Button  className="humberger-btn"  onClick={showDrawer}>
+          <Button className="humberger-btn" onClick={showDrawer}>
             <BurgerIcon className={"icon-one"} />
           </Button>
 
           <UlWrapper className="flexNullCenter">
-            <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="home" spy={true} smooth={true} offset={-80}>
-                Home
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="our-service" spy={true} smooth={true} offset={-80}>
-                Our Service
-              </Link>
-            </li>
-
-            <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
-                Price
-              </Link>
-            </li>
-
-            <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
-               Our Clients
-              </Link>
-            </li>
-
-            <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="AboutUs" spy={true} smooth={true} offset={-80}>
-                About Us
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
-                Contact
-              </Link>
-            </li>
+            {data.navData?.map(({ id, link, title }) => {
+              return (
+                <div key={id}>
+                  <li className="semiBold font15 pointer">
+                    <Link
+                      activeClass="active"
+                      style={{ padding: "10px 15px" }}
+                      to={link}
+                      spy={true}
+                      smooth={true}
+                      offset={-80}
+                    >
+                      {title}
+                    </Link>
+                  </li>
+                </div>
+              );
+            })}
           </UlWrapper>
+          <LangWrapper>
+            <select 
+            value={lang} 
+            onChange={(e) => langChanger(e.target.value)}
+           
+            >
+              {data.languages?.map(({ id, title,img }) => {
+                return (
+                  <option 
+                  key={id} 
+                  value={title}
+                  style={
+                    y > 100
+                      ? {
+                          backgroundColor: "#0080ff",
+                        }
+                      : { }
+                  }
+                  >
+                    <img src={img} alt="flag"/>  {title}
+                  </option>
+                );
+              })}
+            </select>
+          </LangWrapper>
         </NavInner>
       </Wrapper>
     </>
   );
-}
-export  default Navbar
-
+};
+export default Navbar;
