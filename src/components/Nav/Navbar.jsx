@@ -120,7 +120,7 @@ const Navbar = () => {
           </UlWrapper>
           <LangWrapper>
             <select 
-            value={lang} 
+            defaultValue={'RU'} 
             onChange={(e) => langChanger(e.target.value)}
            
             >

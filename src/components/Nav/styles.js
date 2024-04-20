@@ -20,7 +20,6 @@ export const Wrapper = styled.nav`
       display: block;
     }
   }
-
 `;
 export const NavInner = styled.div`
   position: relative;
@@ -29,51 +28,48 @@ export const NavInner = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-   @media screen and (min-width: 1600px){
+  @media screen and (min-width: 1600px) {
     width: 73%;
     margin: auto;
-    }
-  @media screen and (max-width: 1600px){
+  }
+  @media screen and (max-width: 1600px) {
     width: 90%;
     margin: auto;
   }
 
-  .nav-logo{
+  .nav-logo {
     height: 55px;
     width: fit-content;
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px) {
       height: 50px;
       width: 100px;
     }
-    svg{
+    svg {
       height: 100%;
       width: 100%;
     }
   }
-  
-`
+`;
 
 export const UlWrapper = styled.ul`
   display: flex;
-  li{
+  li {
     font-size: 16px;
     font-weight: 400 !important;
-    
   }
-  
+
   @media (max-width: 760px) {
     display: none;
   }
 `;
 export const Drawer = styled.div`
-height: 100%;
-width: 100%;
-right: ${({ open }) => (!open ? "-100vw" : "0")};
-position: fixed;
-top: 0;
-z-index: 99999999999999;
+  height: 100%;
+  width: 100%;
+  right: ${({ open }) => (!open ? "-100vw" : "0")};
+  position: fixed;
+  top: 0;
+  z-index: 99999999999999;
 `;
-
 
 export const Button = styled.div`
   width: 40px;
@@ -84,7 +80,6 @@ export const Button = styled.div`
   }
 `;
 export const NavbarButton = styled.div`
-
   //background-color: ;
   padding: 11px 30px;
   border: unset;
@@ -99,9 +94,9 @@ export const NavbarButton = styled.div`
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   overflow: hidden;
   transition: all 450ms;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   @media screen and (min-width: 1000px) {
-   display: none;
+    display: none;
   }
 
   &:before {
@@ -120,47 +115,42 @@ export const NavbarButton = styled.div`
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
     box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
     transition: all 450ms;
-
   }
 
   &:hover {
     cursor: pointer;
-
   }
 
   &:hover::before {
     width: 100%;
   }
-  a{
-    color: #fff ;
+  a {
+    color: #fff;
   }
   &:hover {
-    background-color: #49CB86;
+    background-color: #49cb86;
   }
-  @media screen and (max-width: 800px){
-    
+  @media screen and (max-width: 800px) {
   }
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 800px) {
     display: none;
   }
 `;
 export const LangWrapper = styled.div`
-
-select {
-  /* background-color: #ffffff; */
-  color: #000000;
-  padding: 10px 15px;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
+  select {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 5px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
 
     option {
-  color: #000000;
-  outline: none;
+      color: #000;
+      outline: none;
     }
   }
 `;
-export const LangButton = styled.div`
-  
-`;
+export const LangButton = styled.div``;
