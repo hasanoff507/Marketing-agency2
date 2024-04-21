@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Button, Container, ServiceBox, ServiceWrapper, Title, Wrapper} from "./style";
 import {ReactComponent as GoogleSvg} from "../../../../assets/serviceItems/serviceLogo/Google Ads.svg";
 import {ReactComponent as FacebookSvg} from "../../../../assets/serviceItems/serviceLogo/facebook-ads.svg";
-import {ReactComponent as BingSvg} from "../../../../assets/serviceItems/serviceLogo/bing-ads-logo.svg";
+import {ReactComponent as BingSvg} from "../../../../assets/serviceItems/serviceLogo/yandex.svg";
 import {ReactComponent as SeoSvg} from "../../../../assets/serviceItems/serviceLogo/smart-seo-seeklogo.svg";
 import Text from "../../../../language/langManager"
 import PopUp from "../../../popUp";
@@ -60,7 +60,7 @@ const OurService = () => {
                             <BingSvg/>
                         </div>
                         <p className={"title"}>
-                            Bing Ads
+                            Yandex Ads
                         </p>
                         <p className={"text"}>
                         <Text id={"ourServiceCardText3"}/>

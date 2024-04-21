@@ -31,6 +31,8 @@ export const Wrapper =styled.div`
     
     @media screen and (max-width: 600px){
       width: 90% !important;
+      margin: 20px auto;
+      padding-left: 20px;
     }
 
   .header {
@@ -45,6 +47,9 @@ export const Wrapper =styled.div`
     margin-bottom: 10px;
     color: #fff;
     text-align: center;
+    @media only screen and (max-width: 600px) {
+      font-size: 24px !important;
+    }
   }
 
   .price {
@@ -52,8 +57,12 @@ export const Wrapper =styled.div`
     line-height: 1;
     font-weight: 700;
     color: #fff;
+    &:nth-child(2){
+      font-size: 2.5rem;
+      padding: 10px 0;
+    }
     @media only screen and (max-width: 600px) {
-      font-size: 40px;
+      font-size: 20px !important;
     }
   }
 
@@ -73,6 +82,13 @@ export const Wrapper =styled.div`
     margin-bottom: 1rem;
     display: flex;
     margin-left: 0.5rem
+  }
+  .lists span {
+    @media only screen and (max-width: 600px) {
+      font-size: 14px !important;
+      font-weight: 400;
+      line-height: 130%;
+    }
   }
 
   .lists .list svg {

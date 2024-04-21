@@ -74,72 +74,7 @@ export const data = {
         {
             id:0,
             title:<Text id="priceCardtitle1"/>,
-            price:"950",
-            subtitle:"",
-            texts:[
-              {
-                id:0,
-                title:<Text id="priceCardtext1"/>
-              },
-              {
-                id:1,
-                title:<Text id="priceCardtext2"/>
-              },
-              {
-                id:2,
-                title:<Text id="priceCardtext3"/>
-              },
-              {
-                id:3,
-                title:<Text id="priceCardtext4"/>
-              },
-              {
-                id:4,
-                title:<Text id="priceCardtext5"/>
-              },
-              
-            ]
-        },
-        {
-            id:1,
-            title:"Premium",
-            price:"15%",
-            subtitle:"",
-            texts:[
-              {
-                id:0,
-                title:<Text id="priceCardtext1"/>
-              },
-              {
-                id:1,
-                title:<Text id="priceCardtext2"/>
-              },
-              {
-                id:2,
-                title:<Text id="priceCardtext3"/>
-              },
-              {
-                id:3,
-                title:<Text id="priceCardtext4"/>
-              },
-              {
-                id:4,
-                title:<Text id="priceCardtext5"/>
-              },
-              {
-                id:5,
-                title:<Text id="priceCardtext6"/>
-              },
-              {
-                id:6,
-                title:<Text id="priceCardtext7"/>
-              },
-            ]
-        },
-        {
-            id:2,
-            title:"Enterprise",
-            price:"30%",
+            price:"$500",
             subtitle:"",
             texts:[
               {
@@ -173,6 +108,123 @@ export const data = {
               {
                 id:7,
                 title:<Text id="priceCardtext8"/>
+              },
+              {
+                id:8,
+                title:<Text id="priceCardtext9"/>
+              },
+              {
+                id:9,
+                title:<Text id="priceCardtext10"/>
+              },
+            ]
+        },
+        {
+            id:1,
+            title:"Premium",
+            price:"$1000",
+            subtitle:"",
+            texts:[
+              {
+                id:0,
+                title:<Text id="priceCard2text1"/>
+              },
+              {
+                id:1,
+                title:<Text id="priceCardtext22"/>
+              },
+              {
+                id:2,
+                title:<Text id="priceCard2text3"/>
+              },
+              {
+                id:3,
+                title:<Text id="priceCard2text4"/>
+              },
+              {
+                id:4,
+                title:<Text id="priceCard2text5"/>
+              },
+              {
+                id:5,
+                title:<Text id="priceCard2text6"/>
+              },
+              {
+                id:6,
+                title:<Text id="priceCard2text7"/>
+              },
+              {
+                id:7,
+                title:<Text id="priceCard2text8"/>
+              },
+              {
+                id:8,
+                title:<Text id="priceCard2text9"/>
+              },
+              {
+                id:9,
+                title:<Text id="priceCard2text10"/>
+              },
+              {
+                id:10,
+                title:<Text id="priceCard2text11"/>
+              },
+              {
+                id:11,
+                title:<Text id="priceCard2text12"/>
+              },
+              
+            ]
+        },
+        {
+            id:2,
+            title:"Enterprise",
+            price:<Text id="priceCard3Subtitle1"/>,
+            subtitle:<Text id="priceCard3Subtitle2"/>,
+            texts:[
+              {
+                id:0,
+                title:<Text id="priceCard3text1"/>
+              },
+              {
+                id:1,
+                title:<Text id="priceCard3text3"/>
+              },
+              {
+                id:2,
+                title:<Text id="priceCard3text4"/>
+              },
+              {
+                id:3,
+                title:<Text id="priceCard3text5"/>
+              },
+              {
+                id:4,
+                title:<Text id="priceCard3text6"/>
+              },
+              {
+                id:5,
+                title:<Text id="priceCard3text7"/>
+              },
+              {
+                id:6,
+                title:<Text id="priceCard3text8"/>
+              },
+              {
+                id:7,
+                title:<Text id="priceCard3text9"/>
+              },
+              {
+                id:8,
+                title:<Text id="priceCard3text10"/>
+              },
+              {
+                id:9,
+                title:<Text id="priceCard3text11"/>
+              },
+              {
+                id:10,
+                title:<Text id="priceCard3text12"/>
               },
             ]
         },

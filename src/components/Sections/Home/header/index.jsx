@@ -7,7 +7,7 @@ import { HttpRequest } from "../../../../hooks/httpRequest";
 import { serviceData } from "../../../../Constants/serviceType";
 import { useNavigate } from "react-router-dom";
 
-import videoFile from "../../../../assets/hero.mp4"
+import videoFile from "../../../../assets/hero.mp4";
 import {
   Button,
   Container,
@@ -23,9 +23,10 @@ import {
   Wrapper,
   MobileBtn,
   HeaderVideo,
+  Subtitle,
 } from "./styles";
 
-import Text from "../../../../language/langManager"
+import Text from "../../../../language/langManager";
 
 const Header = () => {
   // don't  edit this code
@@ -40,9 +41,8 @@ const Header = () => {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const navigate = useNavigate();
-  
+
   const handleSubmit = (e) => {
-    
     e.preventDefault();
     setFormErrors(validate(state, e));
     setIsSubmit(true);
@@ -51,19 +51,18 @@ const Header = () => {
   useEffect(() => {}, [formErrors]);
 
   const validate = (values, e) => {
-    const currentNumber = values.number.replace(/\D/g, '');
-    
-    console.log(values)
+    const currentNumber = values.number.replace(/\D/g, "");
+
+    console.log(values);
     const errors = {};
     if (!values.name) {
-      errors.name = <Text id={"homeFormAlertTitle1"}/>;
+      errors.name = <Text id={"homeFormAlertTitle1"} />;
     } else if (values.name.length < 4) {
-      errors.name = <Text id={"homeFormAlertTitle3"}/>;
-    } else if (values.number.length == "" ) {
-      errors.number = <Text id={"homeFormAlertTitle2"}/>;
+      errors.name = <Text id={"homeFormAlertTitle3"} />;
+    } else if (values.number.length == "") {
+      errors.number = <Text id={"homeFormAlertTitle2"} />;
     } else if (currentNumber.length < 12) {
-    
-      errors.number = <Text id={"homeFormAlertTitle4"}/>
+      errors.number = <Text id={"homeFormAlertTitle4"} />;
     } else {
       HttpRequest({
         e,
@@ -89,61 +88,49 @@ const Header = () => {
       <Container>
         <LeftSide>
           <Title>
-          <Text id={"homeHeaderTitle1"}/>
-            <div>
-              <TypeAnimation
-                sequence={[
-                  "Google Ads", // Types 'One'
-                  2000, // Waits 1s
-                  "Facebook Ads", // Deletes 'One' and types 'Two'
-                  4000, // Waits 2s
-                  "Bing Ads",
-                  4000,
-                  "SEO",
-                  4000,
-                  // Types 'Three' without deleting 'Two'
-                ]}
-                wrapper="span"
-                speed={7}
-                cursor={true}
-                repeat={Infinity}
-                style={{ fontSize: "", display: "inline-block" }}
-              />
-            </div>
-            <div className="under-title"> 
-            <Text id={"homeHeaderTitle2"}/>
-             </div>
+            <Text id={"homeHeaderTitle1"} />
           </Title>
-          <MobileBtn onClick={() => setPopUp(true)}>Get Started</MobileBtn>
+          <Subtitle>
+            <Text id={"homeHeaderTitle2"} />
+            <br />
+            <Text id={"homeHeaderSubtitle2"} />
+          </Subtitle>
+          <MobileBtn onClick={() => setPopUp(true)}>
+          <Text id={"homeButton"} />
+          </MobileBtn>
         </LeftSide>
 
         <RightSide>
           <Form onSubmit={handleSubmit}>
             <FormContainer>
-              <FormTitle> 
-              <Text id={"homeHeaderFormTitle"}/>
+              <FormTitle>
+                <Text id={"homeHeaderFormTitle"} />
               </FormTitle>
-              <p
-                style={formErrors.name ? { color: "red" } : { color: "#fff" }}
-              >
-                {formErrors.name ? formErrors.name : <Text id={"homeHeaderInputTitle"}/>}
+              <p style={formErrors.name ? { color: "red" } : { color: "#fff" }}>
+                {formErrors.name ? (
+                  formErrors.name
+                ) : (
+                  <Text id={"homeHeaderInputTitle"} />
+                )}
               </p>
               <Input
                 className={"input-numb"}
                 value={state.name}
                 type={"Name"}
-                placeholder={Text({id:"homeHeaderInputTitle"})}
+                placeholder={Text({ id: "homeHeaderInputTitle" })}
                 maxLength={30}
                 onChange={(e) =>
                   setState({ ...state, name: e.target.value.trim() })
                 }
               />
               <p
-                style={
-                  formErrors.number ? { color: "red" } : { color: "#fff" }
-                }
+                style={formErrors.number ? { color: "red" } : { color: "#fff" }}
               >
-                {formErrors.number ? formErrors.number : <Text id={"homeHeaderInputTitle1"}/>}
+                {formErrors.number ? (
+                  formErrors.number
+                ) : (
+                  <Text id={"homeHeaderInputTitle1"} />
+                )}
               </p>
 
               <PatternFormat
@@ -159,18 +146,18 @@ const Header = () => {
               />
 
               <p>
-              <Text id={"homeHeaderInputTitle2"}/>
+                <Text id={"homeHeaderInputTitle2"} />
               </p>
               <Input
                 className={"numb"}
                 type="email"
-                placeholder={Text({id:"homeHeaderInputTitle2"})}
+                placeholder={Text({ id: "homeHeaderInputTitle2" })}
                 value={state.email}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
               />
 
               <p>
-              <Text id={"homeHeaderInputTitle3"}/>
+                <Text id={"homeHeaderInputTitle3"} />
               </p>
 
               <SelectInput
@@ -185,8 +172,8 @@ const Header = () => {
                 ))}
               </SelectInput>
             </FormContainer>
-            <Button> 
-            <Text id={"homeButton"}/>
+            <Button>
+              <Text id={"homeButton"} />
             </Button>
           </Form>
         </RightSide>

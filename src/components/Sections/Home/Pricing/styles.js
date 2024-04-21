@@ -33,7 +33,7 @@ export const Container = styled.div`
   }
   
   @media screen and (max-width: 800px){
-    width: 90%;
+    width: 95%;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -54,10 +54,7 @@ export const HeaderInfo = styled.div`
 
   }
   
-  h1{
-   
-    
-  }
+  
   .subtitle{
     width: 50%;
     margin: auto;
@@ -66,7 +63,9 @@ export const HeaderInfo = styled.div`
     font-weight: 500;
     line-height: 22px;
     @media (max-width: 600px) {
-      width: 90%;
+      width: 100%;
+      font-size: 13px;
+      line-height: 130%;
       
     }
   }

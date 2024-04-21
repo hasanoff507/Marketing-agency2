@@ -79,14 +79,17 @@ export const RightSide = styled.div`
 `;
 
 export const Title = styled.div`
-  font-family: "Roboto" !important;
+  font-family: Gothem, sans-serif !important;
+  font-optical-sizing: auto;
   font-style: normal;
-  font-size: 64px;
+  font-size: 73px;
   color: #fff;
-  font-weight: 800;
+  font-weight: 700;
   width: 100%;
   margin: auto;
-  margin-top: 140px;
+  margin-top: 130px;
+  line-height: 140%;
+  text-transform: uppercase;
   @media screen and (max-width: 1500px) {
     font-size: 40px;
   }
@@ -94,15 +97,48 @@ export const Title = styled.div`
     font-size: 45px;
     width: 100%;
   }
-  @media screen and (max-width: 500px) {
-    font-size: 27.5px;
-    font-weight: 700;
+  @media screen and (max-width: 700px) {
+    font-size: 28px;
+    font-weight:800;
     line-height: 30px;
+    line-height: 141%;
     width: 85%;
     margin-top: 0;
   }
   span {
-    color: #0080ff;
+    color: #fff;
+    font-family: "Roboto" !important;
+  }
+  .under-title {
+    font-family: "Roboto" !important;
+  
+  }
+`;
+export const Subtitle = styled.p`
+  font-family: GothemMedium, sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 35px;
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+  margin: auto;
+  line-height: 45px;
+  margin-top: 30px;
+ 
+  @media screen and (max-width: 800px) {
+    font-size:26px;
+    width: 100%;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 18.5px;
+    font-weight: 400;
+    line-height: 25px;
+    width: 85%;
+    margin-top: 15px;
+  }
+  span {
+    color: #fff;
     font-family: "Roboto" !important;
   }
   .under-title {
@@ -291,9 +327,9 @@ export const MobileBtn = styled.div`
     font-weight: 500;
     width: fit-content;
     background-color: #fff;
-    border-radius: 30px;
+    border-radius: 3px;
     font-size:16px;
-    padding: 10px 35px;
+    padding: 11px 40px;
     margin-top: 27px;
     margin-left: 30px;
   }

@@ -18,14 +18,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 800px){
-    width: 90%;
+    width: 100%;
   }
  
-  h1{
+  h1 {
     text-align: center;
     @media screen and (max-width: 600px) {
       width: 90%;
       margin: auto;
+
     }
   }
   .subtitle{
@@ -43,9 +44,10 @@ export const Container = styled.div`
     }
     @media screen and (max-width: 700px) {
       width: 90%;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 500;
       margin-bottom: 20px;
+      line-height: 130%;
     }
   
   }
@@ -85,7 +87,7 @@ export const Title =styled.div`
     font-size: 36px;
   }
   @media screen and (max-width: 700px){
-    font-size: 28px;
+    font-size: 32px;
   }
   span{
      color: #0080ff;    
@@ -101,21 +103,29 @@ export const ServiceBox =styled.div`
   padding: 50px 0;
   margin: 30px;
   width: 38%;
+  overflow: hidden;
   /* background-color: #0080ff88; */
   border-radius: 30px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  align-items: center;
+
   @media screen and (max-width: 700px) {
-    width: 90%;
-    padding: 50px 20px;
+    width: 100%;
+    padding: 50px 15px;
     margin-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
+    &:hover{
+      svg{
+        transform: scale(1) !important;
+      }
+    }
     .google-svg{
       transform: scale(1.3);
     }
   }
-  align-items: center;
+
   &:hover{
       svg{
         transform: scale(1.4);

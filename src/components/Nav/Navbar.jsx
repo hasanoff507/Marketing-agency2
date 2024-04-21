@@ -94,9 +94,6 @@ const Navbar = () => {
               <LogoSvg />
             </div>
           </Link>
-          <Button className="humberger-btn" onClick={showDrawer}>
-            <BurgerIcon className={"icon-one"} />
-          </Button>
 
           <UlWrapper className="flexNullCenter">
             {data.navData?.map(({ id, link, title }) => {
@@ -118,31 +115,36 @@ const Navbar = () => {
               );
             })}
           </UlWrapper>
-          <LangWrapper>
-            <select 
-            defaultValue={'RU'} 
-            onChange={(e) => langChanger(e.target.value)}
-           
-            >
-              {data.languages?.map(({ id, title,img }) => {
-                return (
-                  <option 
-                  key={id} 
-                  value={title}
-                  style={
-                    y > 100
-                      ? {
-                          backgroundColor: "#0080ff",
-                        }
-                      : { }
-                  }
-                  >
-                    <img src={img} alt="flag"/>  {title}
-                  </option>
-                );
-              })}
-            </select>
-          </LangWrapper>
+          
+          <div className="rightContent">
+            <LangWrapper>
+              <select
+                defaultValue={"RU"}
+                onChange={(e) => langChanger(e.target.value)}
+              >
+                {data.languages?.map(({ id, title, }) => {
+                  return (
+                    <option
+                      key={id}
+                      value={title}
+                      style={
+                        y > 100
+                          ? {
+                              backgroundColor: "#0080ff",
+                            }
+                          : {}
+                      }
+                    >
+                       {title}
+                    </option>
+                  );
+                })}
+              </select>
+            </LangWrapper>
+            <Button className="humberger-btn" onClick={showDrawer}>
+              <BurgerIcon className={"icon-one"} />
+            </Button>
+          </div>
         </NavInner>
       </Wrapper>
     </>

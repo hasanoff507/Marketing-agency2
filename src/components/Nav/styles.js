@@ -36,6 +36,10 @@ export const NavInner = styled.div`
     width: 90%;
     margin: auto;
   }
+  @media screen and (max-width: 700px) {
+    width: 90%;
+    margin: auto;
+  }
 
   .nav-logo {
     height: 55px;
@@ -49,12 +53,18 @@ export const NavInner = styled.div`
       width: 100%;
     }
   }
+  .rightContent{
+    width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
 `;
 
 export const UlWrapper = styled.ul`
   display: flex;
   li {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 400 !important;
   }
 
@@ -137,19 +147,33 @@ export const NavbarButton = styled.div`
   }
 `;
 export const LangWrapper = styled.div`
+margin-right: 20px;
   select {
     background-color: transparent;
     color: #fff;
-    padding: 10px 5px;
+    padding: 10px 0px;
     border: none;
     border-radius: 2px;
     outline: none;
     cursor: pointer;
     font-size: 15px;
+    @media screen and (max-width: 700px) {
+      font-size: 14px;
+      font-weight: 400;
+      border-radius: 0;
+
+    
+  }
 
     option {
       color: #000;
       outline: none;
+      @media screen and (max-width: 700px) {
+      font-size: 14px;
+      font-weight: 400;
+      padding: 5px;
+    
+  }
     }
   }
 `;

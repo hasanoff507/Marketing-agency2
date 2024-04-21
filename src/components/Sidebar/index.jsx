@@ -18,7 +18,7 @@ const Sidebar = ({ onClose }) => {
         </CloseBtn>
       </SidebarHeader>
       <UlStyle className="flexNullCenter flexColumn">
-        {data.navData.map(({ id, link, name }) => {
+        {data.navData.map(({ id, link, title }) => {
           return (
             <li key={id} className="pointer">
               <Link
@@ -30,7 +30,7 @@ const Sidebar = ({ onClose }) => {
                 smooth={true}
                 offset={-60}
               >
-                {name}
+                {title}
               </Link>
             </li>
           );
