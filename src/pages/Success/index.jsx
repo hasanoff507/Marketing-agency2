@@ -5,9 +5,9 @@ import Text from "../../language/langManager"
 
 const Success = () => {
   const navigate = useNavigate()
-  // setTimeout(() => {
-  //   navigate('/')
-  // }, 20500);
+  setTimeout(() => {
+    navigate('/')
+  }, 20500);
   return (
     <Wrapper>
       <Container>

@@ -108,7 +108,7 @@ const PopUp = ({ setPopUp, popUp }) => {
           <Input
             className={"numb"}
             type="email"
-            placeholder={"Email Address "}
+            placeholder={Text({id:"homeHeaderInputTitle1"})}
             value={state.email}
             onChange={(e) => setState({ ...state, email: e.target.value })}
           />

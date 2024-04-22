@@ -13,7 +13,7 @@ const russian = {
   homeHeaderFormTitle: "Свяжитесь с нами",
   homeHeaderInputTitle: "Имя",
   homeHeaderInputTitle1: "Номер телефона",
-  homeHeaderInputTitle2: "Eлектронной почты",
+  homeHeaderInputTitle2: "Электронной почты",
   homeHeaderInputTitle3: "Сервис",
   homeButton: "Начать",
   homeFormAlertTitle1: "Пожалуйста, укажите ваше имя.",

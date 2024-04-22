@@ -1,12 +1,8 @@
-import {TELEGRAM_API,chatIds} from "../Constants/api"
+import { TELEGRAM_API, chatIds } from "../Constants/api";
 
-export const HttpRequest = async ({
-  e,
-  state,
-  setState,
-}) => {
+export const HttpRequest = async ({ e, state, setState }) => {
   e.preventDefault();
-  const { name, number, email, service,text } = state;
+  const { name, number, email, service, text } = state;
 
   const FormData = `
     Name: ${name},
@@ -16,7 +12,7 @@ export const HttpRequest = async ({
     text: ${text ? text : "none"}
     `;
 
-  if ((name.length < 4) && (number.length < 17)) {
+  if (name.length < 4 && number.length < 17) {
     console.log("formData is Empty");
   } else {
     try {
@@ -35,13 +31,13 @@ export const HttpRequest = async ({
         if (data.ok) {
           setState({
             name: "",
-            number:"",
-            email:"",
-            service:"",
-            text:""
-          })
+            number: "",
+            email: "",
+            service: "",
+            text: "",
+          });
         } else {
-          alert("Данные не отправляются");
+          // alert("Данные не отправляются");
           console.log(
             Error(`sending message to chat ID ${chatId}: ${data.description}`)
           );
