@@ -102,6 +102,25 @@ contactTitle:"Let's Get in Touch",
 contactSubtitle:"Your ideas and business goals deserve outstanding digital execution. At Adigmo, we're ready to help. Provide your contact details below, and one of our specialists will get in touch soon to discuss your project.",
 fullName:"Full Name",
 buttonSend:"Send",
+// footer section words
+footerTitle1:"Company",
+footerTitle2:" Marketing",
+footerTitle3:"Location",
+footerTitle4:"Follow Us",
+footerColText1:"Home",
+footerColText2:"Our Service",
+footerColText3:"Our Price",
+footerColText4:"All Projects",
+footerCol2Text1:"FAQ",
+footerCol2Text2:"Marketing",
+footerCol2Text3:"Payment System",
+footerCol2Text4:"Status Project ",
+footerCol2Text5:"Payment Option",
+footerCol3Text1:"Uzbekiston,Tashkent",
+footerCol3Text2:"Chilonzor District, Zukhur",
+footerCol3Text3:"Polvon, 3-Y House",
+footerCol3Text4:"Phone: +998 (97) 753 14 01",
+
 
 
 }

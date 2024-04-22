@@ -5,7 +5,7 @@ import {ReactComponent as FaceBookSvg} from "../../assets/main/social-icons/face
 import {ReactComponent as LinkedinSvg} from "../../assets/main/social-icons/linkedin-svgrepo-com.svg";
 import {ReactComponent as TelegramSvg} from "../../assets/main/social-icons/telegram-svgrepo-com.svg";
 import { Link } from "react-scroll";
-
+import Text from "../../language/langManager"
 
 const Footer = () => {
     return(
@@ -14,39 +14,57 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="footer-col">
-                            <h4>Компания</h4>
+                            <h4>
+                                <Text id="footerTitle1"/>
+                            </h4>
                             <ul>
-                                <li> <Link to="home" spy={true} smooth={true} >Главная</Link></li>
-                                <li> <Link to="our-service" spy={true} smooth={true} >наши услуги</Link></li>
-                                <li> <Link to="pricing" spy={true} smooth={true} >наши Цены</Link></li>
-                                <li> <Link to="projects" spy={true} smooth={true} >Все проекты</Link></li>
+                                <li> <Link to="home" spy={true} smooth={true} >
+                                <Text id="footerColText1"/>
+                                </Link></li>
+                                <li> <Link to="our-service" spy={true} smooth={true} >
+                                <Text id="footerColText2"/>
+                                    </Link></li>
+                                <li> <Link to="pricing" spy={true} smooth={true} >
+                                <Text id="footerColText3"/>
+                                    </Link></li>
+                                <li> <Link to="projects" spy={true} smooth={true} >
+                                <Text id="footerColText4"/>
+                                    </Link></li>
                             </ul>
                         </div>
                         <div className="footer-col">
-                            <h4>Разработка</h4>
+                            <h4>
+                            <Text id="footerTitle2"/>
+                            </h4>
                             <ul>
-                                <li> <Link to="" spy={true} smooth={true} >FAQ</Link></li>
-                                <li> <Link to="" spy={true} smooth={true} >Выполнить разработку</Link></li>
-                                <li> <Link to="" spy={true} smooth={true} >Платежная система</Link></li>
-                                <li> <Link to="" spy={true} smooth={true} >статус заказа</Link></li>
-                                <li> <Link to="" spy={true} smooth={true} >варианты оплаты</Link></li>
+                                <li> <Link to="" spy={true} smooth={true} >
+                                <Text id="footerCol2Text1"/>
+                                    </Link></li>
+                                <li> <Link to="" spy={true} smooth={true} >
+                                <Text id="footerCol2Text2"/>
+                                    </Link></li>
+                                <li> <Link to="" spy={true} smooth={true} >
+                                <Text id="footerCol2Text3"/>
+                                    </Link></li>
+                                <li> <Link to="" spy={true} smooth={true} >
+                                <Text id="footerCol2Text4"/>
+                                    </Link></li>
+                                <li> <Link to="" spy={true} smooth={true} >
+                                <Text id="footerCol2Text5"/>
+                                    </Link></li>
                             </ul>
                         </div>
-                        {/* <div className="footer-col">
-                            <h4>Интернет-магазин</h4>
-                            <ul>
-                                <li> <Link to="" spy={true} smooth={true} >смотреть</Link></li>
-                                <li> <Link to="" spy={true} smooth={true} >Лендинг</Link></li>
-                                <li> <Link to="" spy={true} smooth={true} >Бизнес сайт</Link></li>
-                                <li> <Link to="" spy={true} smooth={true} >Интернет магазин</Link></li>
-                            </ul>
-                        </div> */}
+                        
                         <div className="footer-col">
-                            <h4>Местоположение</h4>
+                            <h4><Text id="footerTitle3"/></h4>
                             <ul>
-                                <li> <Link to="" spy={true} smooth={true} >Узбекистан, Тошкент </Link></li>
-                                <li> <Link to="" spy={true} smooth={true} >Чиланзорский район, Зухур Палвон, 3-й дом </Link></li>
-                                <li> <a href="tel: +998 (97) 753 14 01">телефон: +998 (97) 753 14 01</a></li>
+                                <li> <Link to="" spy={true} smooth={true} >
+                                <Text id="footerCol3Text1"/>
+                                </Link></li>
+                                <li> <Link to="" spy={true} smooth={true} > <Text id="footerCol3Text2"/>  <Text id="footerCol3Text3"/> </Link></li>
+                                <li> <a href="tel: +998 (97) 753 14 01">
+                                <Text id="footerCol3Text4"/> 
+                                    </a></li>
                             </ul>
                         </div>
                         <div className="footer-col">
