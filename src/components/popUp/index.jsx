@@ -103,12 +103,12 @@ const PopUp = ({ setPopUp, popUp }) => {
             onChange={(e) => setState({ ...state, number: e.target.value })}
           />
           <p>
-            <Text id={"homeHeaderInputTitle1"}/>
+            <Text id={"homeHeaderInputTitle2"}/>
           </p>
           <Input
             className={"numb"}
             type="email"
-            placeholder={Text({id:"homeHeaderInputTitle1"})}
+            placeholder={Text({id:"homeHeaderInputTitle2"})}
             value={state.email}
             onChange={(e) => setState({ ...state, email: e.target.value })}
           />
