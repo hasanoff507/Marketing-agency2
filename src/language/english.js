@@ -6,9 +6,9 @@ navbarTitle4:"Our Clients",
 navbarTitle5:"About Us",
 navbarTitle6:"Contact",
 // hero page
-homeHeaderTitle1:"WE ARE INFLUENCER MARKETING",
-homeHeaderTitle2: "Strategy and execution from the",
-homeHeaderSubtitle2: "company that launched the industry.",
+homeHeaderTitle1:"WE HAVE SOLUTIONS TO YOUR BUSSINESS PROBLEMS",
+homeHeaderTitle2: "We leverage assests in order to make the best solutions.", 
+homeHeaderSubtitle2: "Your future starts here.",
 homeHeaderFormTitle:"Contact with Us",
 homeHeaderInputTitle:"Name",
 homeHeaderInputTitle1:"Phone Number",
@@ -24,7 +24,7 @@ ourServiceTitle:"Marketing Solutions",
 ourServiceSubtitle:"Unlock your brand's potential with our comprehensive marketing solutions. From precise Google Ads and targeted Facebook campaigns to effective SEO strategies, we help you connect, engage, and grow your audience.",
 ourServiceCardText1:"Drive targeted traffic to your website and boost conversions with Google Ads. Our expert team creates and manages impactful campaigns, ensuring your ads reach the right audience at the right time.",
 ourServiceCardText2:"Engage your audience with tailored Facebook Ads. Our team designs eye-catching campaigns that connect with your target market, driving more traffic, leads, and conversions for your business.",
-ourServiceCardText3:"New customers mean more than just clicks. Unlock your business potential with Yandex Ads. Create, optimize, and track ad campaigns with ease. Expand your audience today!",
+ourServiceCardText3:"New customers mean more than just clicks. Unlock your business potential with Yandex Direct. Create, optimize, and track ad campaigns with ease. Expand your audience today!",
 ourServiceCardText4:"Boost your online visibility and organic traffic with expert SEO strategies. We optimize your website to rank higher on search engines, helping you attract more qualified leads and grow your business.",
 // price service page
 priceTitle:"Explore Our Pricing",
@@ -120,7 +120,13 @@ footerCol3Text1:"Uzbekiston,Tashkent",
 footerCol3Text2:"Chilonzor District, Zukhur",
 footerCol3Text3:"Polvon, 3-Y House",
 footerCol3Text4:"Phone: +998 (97) 753 14 01",
-
+// Succes Page
+succesPageTitle:"Hello, my dear friend Adigmo!",
+successPageText1:"Well! Your contact form has been successfully submitted! Our team is looking forward to the opportunity to get in touch with you.",
+successPageText2:"Expect a call or an email from our specialists soon. Together, we will bring your ideas to life and create a successful partnership.",
+successPageText4:"Thank you for contacting Adigmo. We look forward to communicating with you soon!",
+successPageText5:"With best regards, Adigmo Team ",
+buttonWell:"Good"
 
 
 }

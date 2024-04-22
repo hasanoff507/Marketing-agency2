@@ -60,7 +60,7 @@ const OurService = () => {
                             <BingSvg/>
                         </div>
                         <p className={"title"}>
-                            Yandex Ads
+                            Yandex Direct
                         </p>
                         <p className={"text"}>
                         <Text id={"ourServiceCardText3"}/>

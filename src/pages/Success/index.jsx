@@ -1,12 +1,13 @@
 import MessageTik from "../../components/MessageTik";
 import { Box, Container, Title, Wrapper, Button, Icon } from "./style";
 import  {useNavigate} from "react-router-dom";
+import Text from "../../language/langManager"
 
 const Success = () => {
   const navigate = useNavigate()
-  setTimeout(() => {
-    navigate('/')
-  }, 20500);
+  // setTimeout(() => {
+  //   navigate('/')
+  // }, 20500);
   return (
     <Wrapper>
       <Container>
@@ -14,25 +15,32 @@ const Success = () => {
           <Icon>
             <MessageTik />
           </Icon>
-          <Title>Здравствуйте, дорогой друг Адигмо!</Title>
+          <Title>
+            <Text id="succesPageTitle"/>
+          </Title>
           <p>
-          Ура! Ваша форма контакта успешно отправлена! Наша команда с нетерпением ждет возможности связаться с вами.
+          <Text id="successPageText1"/>
             {/* <a className={"ancor"} href="tel:+998977531401">
               {" "}
               +998 (97) 753 14 01
             </a> */}
           </p>
           <p>
-          Ожидайте звонка или письма от наших специалистов в ближайшее время. Вместе мы воплотим ваши идеи в реальность и создадим успешное партнерство.
+          <Text id="successPageText2"/>
           </p>
-          <p>Благодарим вас за обращение в Адигмо и до скорого общения!</p>
-          <p>С уважением, Команда Адигмо</p>
+          <p>
+          <Text id="successPageText4"/>
+
+          </p>
+          <p>
+          <Text id="successPageText5"/>
+          </p>
           <Button
             onClick={() => {
               navigate('/')
             }}
           >
-            хорошо
+            <Text id="buttonWell"/>
           </Button>
         </Box>
       </Container>

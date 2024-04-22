@@ -40,12 +40,14 @@ const AboutUs = () => {
                   <Text id={"aboutUsStatisticText1"} />
                 </div>
               </div>
+
               <div className="box">
                 <div className="box-title">15+</div>
                 <div className="box-number">
                   <Text id={"aboutUsStatisticText2"} />
                 </div>
               </div>
+              
               <div className="box">
                 <div className="box-title">25+</div>
                 <div className="box-number">

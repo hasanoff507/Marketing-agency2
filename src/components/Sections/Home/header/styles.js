@@ -82,7 +82,7 @@ export const Title = styled.div`
   font-family: Gothem, sans-serif !important;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 73px;
+  font-size: 70px;
   color: #fff;
   font-weight: 700;
   width: 100%;
@@ -118,7 +118,7 @@ export const Subtitle = styled.p`
   font-family: GothemMedium, sans-serif !important;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 35px;
+  font-size: 28px;
   color: #fff;
   font-weight: 500;
   width: 100%;

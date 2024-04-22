@@ -54,22 +54,17 @@ const Navbar = () => {
 
   const state = useSelector((state) => state);
   const lang = state.lang;
-  const { UZBEK, RUSSIAN, ENGLISH } = langs;
+  // const { UZBEK, RUSSIAN, ENGLISH } = langs;
 
-  const langChanger = (item) => {
-    // const handleTwo = () => {
-    //   setIsRed(true);
-    //   setBlue(lang === UZBEK ? false : "");
-    // };
-    // handleTwo();
-    if ("UZ" === item) {
-      dispatch(switchToUzbek());
-    } else if ("RU" === item) {
-      dispatch(switchToRussian());
-    } else {
-      dispatch(switchToEnglish());
-    }
-  };
+  // const langChanger = (item) => {
+  //   if ("UZ" === item) {
+  //     dispatch(switchToUzbek());
+  //   } else if ("RU" === item) {
+  //     dispatch(switchToRussian());
+  //   } else {
+  //     dispatch(switchToEnglish());
+  //   }
+  // };
 
   return (
     <>
@@ -115,7 +110,7 @@ const Navbar = () => {
               );
             })}
           </UlWrapper>
-          
+{/*           
           <div className="rightContent">
             <LangWrapper>
               <select
@@ -141,10 +136,11 @@ const Navbar = () => {
                 })}
               </select>
             </LangWrapper>
+          </div> */}
+
             <Button className="humberger-btn" onClick={showDrawer}>
               <BurgerIcon className={"icon-one"} />
             </Button>
-          </div>
         </NavInner>
       </Wrapper>
     </>

@@ -9,6 +9,10 @@ export const serviceData = [
     },
     {
       id:2,
+      name:"Yandex Direct",
+    },
+    {
+      id:3,
       name:"SEO",
     },
   ]
