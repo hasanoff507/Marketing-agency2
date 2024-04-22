@@ -88,13 +88,37 @@ const Header = () => {
       <Container>
         <LeftSide>
           <Title>
-            <Text id={"homeHeaderTitle1"} />
+            <Text id={"homeHeaderTitle1"} /> <br/>
+            <Text id={"homeHeaderSubtitle2"} />
+            <div>
+              <TypeAnimation
+                sequence={[
+                  "Google Ads", // Types 'One'
+                  2000, // Waits 1s
+                  "Facebook Ads", // Deletes 'One' and types 'Two'
+                  4000, // Waits 2s
+                  "LinkedIn Ads",
+                  4000,
+                  "Yandex Direct",
+                  4000,
+                  "SEO"
+
+                  // Types 'Three' without deleting 'Two'
+                ]}
+                wrapper="span"
+                speed={7}
+                cursor={true}
+                repeat={Infinity}
+                style={{ fontSize: "", display: "inline-block" }}
+              />
+            </div>
+            
           </Title>
-          <Subtitle>
-            <Text id={"homeHeaderTitle2"} />
+          {/* <Subtitle>
+           
             <br />
             <Text id={"homeHeaderSubtitle2"} />
-          </Subtitle>
+          </Subtitle> */}
           <MobileBtn onClick={() => setPopUp(true)}>
           <Text id={"homeButton"} />
           </MobileBtn>

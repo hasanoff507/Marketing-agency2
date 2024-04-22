@@ -7,9 +7,9 @@ const russian = {
   navbarTitle5: "О нас",
   navbarTitle6: "Контакты",
   // home page 
-  homeHeaderTitle1: "У нас есть решения для ваших бизнес проблем.",
+  homeHeaderTitle1: "Запускаем рекламу, которая работает! Максимальная видимость ",
   homeHeaderTitle2: "Мы используем ресурсы, чтобы создать лучшие решения.",
-  homeHeaderSubtitle2: " Ваше будущее начинается здесь.",
+  homeHeaderSubtitle2: " и рост продаж с",
   homeHeaderFormTitle: "Свяжитесь с нами",
   homeHeaderInputTitle: "Имя",
   homeHeaderInputTitle1: "Номер телефона",

@@ -17,14 +17,14 @@ const Sidebar = ({ onClose }) => {
           <CloseIcon />
         </CloseBtn>
       </SidebarHeader>
-      <UlStyle className="flexNullCenter flexColumn">
+      <UlStyle className=" flexColumn">
         {data.navData.map(({ id, link, title }) => {
           return (
             <li key={id} className="pointer">
               <Link
                 onClick={onClose}
                 activeClass="active"
-                style={{ padding: "10px 15px" }}
+                style={{ padding: "10px  0 15px" }}
                 to={link}
                 spy={true}
                 smooth={true}

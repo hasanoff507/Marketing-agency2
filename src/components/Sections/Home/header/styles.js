@@ -79,18 +79,17 @@ export const RightSide = styled.div`
 `;
 
 export const Title = styled.div`
-  font-family: Gothem, sans-serif !important;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 70px;
+  font-size: 38px;
   color: #fff;
   font-weight: 700;
   width: 100%;
   margin: auto;
-  margin-top: 130px;
+  margin-top: 150px;
   line-height: 140%;
   text-transform: uppercase;
-  @media screen and (max-width: 1500px) {
+   @media screen and (max-width: 1500px) {
     font-size: 40px;
   }
   @media screen and (max-width: 800px) {
@@ -98,15 +97,14 @@ export const Title = styled.div`
     width: 100%;
   }
   @media screen and (max-width: 700px) {
-    font-size: 28px;
-    font-weight:800;
-    line-height: 30px;
+    font-size: 17px;
+    font-weight:700;
     line-height: 141%;
     width: 85%;
     margin-top: 0;
   }
   span {
-    color: #fff;
+    color: #fff !important;
     font-family: "Roboto" !important;
   }
   .under-title {
@@ -138,7 +136,6 @@ export const Subtitle = styled.p`
     margin-top: 15px;
   }
   span {
-    color: #fff;
     font-family: "Roboto" !important;
   }
   .under-title {

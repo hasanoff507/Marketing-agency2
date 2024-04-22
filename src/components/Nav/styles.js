@@ -6,6 +6,7 @@ export const Wrapper = styled.nav`
   top: 0;
   left: 0;
   z-index: 999999;
+ 
   @media screen and (min-width: 1600px) {
     height: 90px !important;
   }

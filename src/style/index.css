@@ -36,6 +36,13 @@
 
   
 }
+body{
+  background: #C9D6FF;
+  background: linear-gradient(
+    to right,
+    #C9D6FF,#E2E2E2
+  );
+}
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
   footer, header, hgroup, menu, nav, section {

@@ -22,7 +22,7 @@ const Projects = () => {
 
   return (
     <Wrapper id="projects">
-      <div className="whiteBg">
+      <div>
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">

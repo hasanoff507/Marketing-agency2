@@ -1,10 +1,10 @@
 import styled from "styled-components";
 export const Wrapper = styled.div`
-  background-color: #0080ff;
   color: #fff !important;
   transition: 0.3s ease;
   height: 100%;
   width: 100%;
+  background-color: #0080ff;
   @media (max-width: 400px) {
     width: 100%;
   }
@@ -52,7 +52,7 @@ export const UlStyle = styled.ul`
     font-weight: 700 !important;
     font-size: 20px;
     @media only screen and (max-width:600px) {
-      font-size: 18px;
+      font-size: 25px;
       font-weight: 500;
     }
   }
