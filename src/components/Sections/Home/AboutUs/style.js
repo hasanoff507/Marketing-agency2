@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   height: fit-content;
   width: 100%;
-  padding: 80px 0;
   @media screen and (max-width: 700px) {
     padding: 80px 0;
     margin: 0;
@@ -11,7 +10,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.div`
-  padding: 150px;
+  padding:100px;
   @media screen and (max-width: 700px) {
     padding-bottom: 20px;
     margin: auto;
@@ -117,7 +116,7 @@ export const Content = styled.div`
     }
   }
   .text {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     margin-top: 25px;
     line-height: 140%;

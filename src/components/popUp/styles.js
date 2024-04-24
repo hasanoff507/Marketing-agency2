@@ -65,7 +65,10 @@ export const Form = styled.form`
 export const FormContainer = styled.div`
   width: 80%;
   margin: auto;
-
+.company-name{
+ margin: 0;
+ padding: 0;
+}
   .input-numb {
     width: 295px;
     margin: 10px 0;

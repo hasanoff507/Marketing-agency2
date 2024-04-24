@@ -35,8 +35,10 @@ const Header = () => {
   const [state, setState] = useState({
     name: "",
     number: "",
+    company: "",
     email: "",
     service: "Google Ads",
+    budget: "Стандартный - 6 000 000 сум",
   });
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -53,13 +55,25 @@ const Header = () => {
   const validate = (values, e) => {
     const currentNumber = values.number.replace(/\D/g, "");
 
-    console.log(values);
+   
     const errors = {};
+    // name checking
+
     if (!values.name) {
       errors.name = <Text id={"homeFormAlertTitle1"} />;
-    } else if (values.name.length < 4) {
+    } else if (values.name.length == 0 && values.name.length < 2) {
       errors.name = <Text id={"homeFormAlertTitle3"} />;
-    } else if (values.number.length == "") {
+    }
+
+    // company check out
+    else if (values.company.length == 0) {
+      errors.company = <Text id={"homeFormAlertTitle12"} />;
+    } else if (values.company.length < 4) {
+      errors.company = <Text id={"homeFormAlertTitle13"} />;
+    }
+
+    // number checking
+    else if (values.number.length == "") {
       errors.number = <Text id={"homeFormAlertTitle2"} />;
     } else if (currentNumber.length < 12) {
       errors.number = <Text id={"homeFormAlertTitle4"} />;
@@ -88,7 +102,7 @@ const Header = () => {
       <Container>
         <LeftSide>
           <Title>
-            <Text id={"homeHeaderTitle1"} /> <br/>
+            <Text id={"homeHeaderTitle1"} /> <br />
             <Text id={"homeHeaderSubtitle2"} />
             <div>
               <TypeAnimation
@@ -101,7 +115,7 @@ const Header = () => {
                   4000,
                   "Yandex Direct",
                   4000,
-                  "SEO"
+                  "SEO",
 
                   // Types 'Three' without deleting 'Two'
                 ]}
@@ -112,7 +126,6 @@ const Header = () => {
                 style={{ fontSize: "", display: "inline-block" }}
               />
             </div>
-            
           </Title>
           {/* <Subtitle>
            
@@ -120,7 +133,7 @@ const Header = () => {
             <Text id={"homeHeaderSubtitle2"} />
           </Subtitle> */}
           <MobileBtn onClick={() => setPopUp(true)}>
-          <Text id={"homeButton"} />
+            <Text id={"homeButton"} />
           </MobileBtn>
         </LeftSide>
 
@@ -130,6 +143,7 @@ const Header = () => {
               <FormTitle>
                 <Text id={"homeHeaderFormTitle"} />
               </FormTitle>
+
               <p style={formErrors.name ? { color: "red" } : { color: "#fff" }}>
                 {formErrors.name ? (
                   formErrors.name
@@ -147,6 +161,29 @@ const Header = () => {
                   setState({ ...state, name: e.target.value.trim() })
                 }
               />
+
+              <p
+                style={
+                  formErrors.company ? { color: "red" } : { color: "#fff" }
+                }
+              >
+                {formErrors.company ? (
+                  formErrors.company
+                ) : (
+                  <Text id={"homeHeaderInputTitle4"} />
+                )}
+              </p>
+              <Input
+                className={"input-numb"}
+                value={state.company}
+                type={"Name"}
+                placeholder={Text({ id: "homeHeaderInputTitle4" })}
+                maxLength={30}
+                onChange={(e) =>
+                  setState({ ...state, company: e.target.value.trim() })
+                }
+              />
+
               <p
                 style={formErrors.number ? { color: "red" } : { color: "#fff" }}
               >
@@ -170,15 +207,27 @@ const Header = () => {
               />
 
               <p>
-                <Text id={"homeHeaderInputTitle2"} />
+                <Text id={"homeHeaderInputTitle5"} />
               </p>
-              <Input
+              <SelectInput
+                onChange={(e) =>
+                  setState({ ...state, budget: e.target.value })
+                }
+              >
+                {serviceData.budget.map(({ id, title }) => (
+                  <Option key={id} defaultValue={`${title}`}>
+                    {title}
+                  </Option>
+                ))}
+              </SelectInput>
+
+              {/* <Input
                 className={"numb"}
                 type="email"
                 placeholder={Text({ id: "homeHeaderInputTitle2" })}
                 value={state.email}
                 onChange={(e) => setState({ ...state, email: e.target.value })}
-              />
+              /> */}
 
               <p>
                 <Text id={"homeHeaderInputTitle3"} />
@@ -189,8 +238,8 @@ const Header = () => {
                   setState({ ...state, service: e.target.value })
                 }
               >
-                {serviceData.map(({ id, name }) => (
-                  <Option key={id} value={`${name}`}>
+                {serviceData.service.map(({ id, name }) => (
+                  <Option key={id} defaultValue={`${name}`}>
                     {name}
                   </Option>
                 ))}

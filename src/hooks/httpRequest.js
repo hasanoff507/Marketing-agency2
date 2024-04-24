@@ -2,12 +2,13 @@ import { TELEGRAM_API, chatIds } from "../Constants/api";
 
 export const HttpRequest = async ({ e, state, setState }) => {
   e.preventDefault();
-  const { name, number, email, service, text } = state;
+  const { name, company,number,budget, service, text } = state;
 
   const FormData = `
     Name: ${name},
-    Number:${number},
-    Email: ${email},
+    company: ${company},
+    Number: ${number},
+    Budget: ${budget},
     Service: ${service},
     text: ${text ? text : "none"}
     `;
@@ -31,8 +32,9 @@ export const HttpRequest = async ({ e, state, setState }) => {
         if (data.ok) {
           setState({
             name: "",
+            company:"",
             number: "",
-            email: "",
+            budget:"",
             service: "",
             text: "",
           });

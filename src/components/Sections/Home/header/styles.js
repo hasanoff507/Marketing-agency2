@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  height: 100vh;
+  height: 85vh;
   width: 100%;
   position: relative;
 
@@ -33,7 +33,7 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   justify-content: space-between;
-  padding-top: 160px;
+  padding-top: 80px;
   position: absolute;
   top: 0;
   left: 0;

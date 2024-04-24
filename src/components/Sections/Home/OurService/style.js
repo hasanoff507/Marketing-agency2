@@ -2,7 +2,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   height: fit-content;
   width: 100%;
-  padding-top: 150px;
+  padding-top: 80px;
 
   @media screen and (max-width: 900px) {
     height: fit-content;
@@ -101,7 +101,8 @@ export const ServiceBox =styled.div`
   display: flex;
   flex-direction: column;
   padding: 50px 0;
-  margin: 30px;
+  height: 560px;
+  margin: 15px;
   width: 38%;
   overflow: hidden;
   /* background-color: #0080ff88; */
