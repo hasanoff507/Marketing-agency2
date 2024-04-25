@@ -74,7 +74,7 @@ export const data = {
         {
             id:0,
             title:<Text id="priceCardtitle1"/>,
-            price:"6 000 000 сум",
+            price:"от 6 000 000 сум",
             subtitle:"",
             texts:[
               {
@@ -122,7 +122,7 @@ export const data = {
         {
             id:1,
             title:"Premium",
-            price:"12 000 000 сум",
+            price:"от 12 000 000 сум",
             subtitle:"",
             texts:[
               {

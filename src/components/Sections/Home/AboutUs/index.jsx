@@ -42,7 +42,7 @@ const AboutUs = () => {
               </div>
 
               <div className="box">
-                <div className="box-title">15+</div>
+                <div className="box-title">17+</div>
                 <div className="box-number">
                   <Text id={"aboutUsStatisticText2"} />
                 </div>
