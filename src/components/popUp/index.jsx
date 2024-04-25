@@ -15,6 +15,7 @@ import { serviceData } from "../../Constants/serviceType";
 import { useNavigate } from "react-router-dom";
 import { PatternFormat } from "react-number-format";
 import Text from "../../language/langManager";
+
 const PopUp = ({ setPopUp, popUp }) => {
   const [state, setState] = useState({
     name: "",
