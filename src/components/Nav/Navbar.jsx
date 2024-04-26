@@ -9,13 +9,9 @@ import BurgerIcon from "../../assets/svg/BurgerIcon";
 import {
   Button,
   Drawer,
-  LangWrapper,
-  NavbarButton,
   NavInner,
   UlWrapper,
   Wrapper,
-  LangSecondBnt,
-  LangButton,
 } from "./styles";
 
 import { data } from "../../data";
@@ -32,8 +28,6 @@ import {
 const Navbar = () => {
   const [y, setY] = useState(window.scrollY);
   const dispatch = useDispatch();
-  const [isRed, setIsRed] = useState(true);
-  const [blue, setBlue] = useState(false);
   const [open, setOpen] = useState(false);
 
   // navbar toggle function
@@ -54,17 +48,7 @@ const Navbar = () => {
 
   const state = useSelector((state) => state);
   const lang = state.lang;
-  // const { UZBEK, RUSSIAN, ENGLISH } = langs;
 
-  // const langChanger = (item) => {
-  //   if ("UZ" === item) {
-  //     dispatch(switchToUzbek());
-  //   } else if ("RU" === item) {
-  //     dispatch(switchToRussian());
-  //   } else {
-  //     dispatch(switchToEnglish());
-  //   }
-  // };
 
   return (
     <>
@@ -110,33 +94,6 @@ const Navbar = () => {
               );
             })}
           </UlWrapper>
-{/*           
-          <div className="rightContent">
-            <LangWrapper>
-              <select
-                defaultValue={"RU"}
-                onChange={(e) => langChanger(e.target.value)}
-              >
-                {data.languages?.map(({ id, title, }) => {
-                  return (
-                    <option
-                      key={id}
-                      value={title}
-                      style={
-                        y > 100
-                          ? {
-                              backgroundColor: "#0080ff",
-                            }
-                          : {}
-                      }
-                    >
-                       {title}
-                    </option>
-                  );
-                })}
-              </select>
-            </LangWrapper>
-          </div> */}
 
             <Button className="humberger-btn" onClick={showDrawer}>
               <BurgerIcon className={"icon-one"} />

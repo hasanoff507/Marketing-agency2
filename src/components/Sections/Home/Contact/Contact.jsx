@@ -33,7 +33,7 @@ const  Contact = () => {
             errors.name = <Text id={"homeFormAlertTitle1"}/>;
         } else if (values.name.length < 4) {
             errors.name = <Text id={"homeFormAlertTitle3"}/>;
-        } else if (values.number.length == "Name must contain at least 4 characters." ) {
+        } else if (values.number.length === "Name must contain at least 4 characters." ) {
             errors.number = <Text id={"homeFormAlertTitle3"}/>;
         } else if (currentNumber.length < 12) {
             errors.number = <Text id={"homeFormAlertTitle4"}/>
