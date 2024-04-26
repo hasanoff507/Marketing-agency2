@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-scroll";
 // Components
 import Sidebar from "../Sidebar/index";
@@ -16,18 +15,9 @@ import {
 
 import { data } from "../../data";
 // language
-import langs from "../../Constants/lang";
-import Text from "../../language/langManager";
-import {
-  switchLang,
-  switchToRussian,
-  switchToUzbek,
-  switchToEnglish,
-} from "../../redux/modules/lang/langAction";
 
 const Navbar = () => {
   const [y, setY] = useState(window.scrollY);
-  const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
 
   // navbar toggle function
@@ -46,8 +36,7 @@ const Navbar = () => {
     };
   }, [y]);
 
-  const state = useSelector((state) => state);
-  const lang = state.lang;
+  
 
 
   return (

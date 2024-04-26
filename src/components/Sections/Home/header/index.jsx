@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "toastify-js/src/toastify.css";
 import { PatternFormat } from "react-number-format";
 import { TypeAnimation } from "react-type-animation";
@@ -23,7 +23,6 @@ import {
   Wrapper,
   MobileBtn,
   HeaderVideo,
-  Subtitle,
 } from "./styles";
 
 import Text from "../../../../language/langManager";
