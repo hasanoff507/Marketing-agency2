@@ -43,19 +43,19 @@ const PopUp = ({ setPopUp, popUp }) => {
     const errors = {};
     if (!values.name) {
       errors.name = <Text id={"homeFormAlertTitle1"} />;
-    } else if (values.name.length == 0 && values.name.length < 2) {
+    } else if (values.name.length === 0 && values.name.length < 2) {
       errors.name = <Text id={"homeFormAlertTitle3"} />;
     }
 
     // company check out
-    else if (values.company.length == 0) {
+    else if (values.company.length === 0) {
       errors.company = <Text id={"homeFormAlertTitle12"} />;
     } else if (values.company.length < 4) {
       errors.company = <Text id={"homeFormAlertTitle13"} />;
     }
 
     // number checking
-    else if (values.number.length == "") {
+    else if (values.number.length === "") {
       errors.number = <Text id={"homeFormAlertTitle2"} />;
     } else if (currentNumber.length < 12) {
       errors.number = <Text id={"homeFormAlertTitle4"} />;
