@@ -4,14 +4,16 @@ export const Wrapper = styled.div`
   height: 85vh;
   width: 100%;
   position: relative;
+  @media screen and (max-width: 1400px) {
+    height: 110vh;
+    padding-bottom: 50px;
+  }
 
   @media screen and (max-width: 1100px) {
     height: fit-content;
     padding-bottom: 50px;
   }
-  @media screen and (max-height: 900px) {
-    height: 110vh;
-  }
+
   @media screen and (max-width: 600px) {
     height: 100vh;
     padding-bottom: 50px;
