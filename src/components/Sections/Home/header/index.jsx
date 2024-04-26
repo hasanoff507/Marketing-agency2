@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "toastify-js/src/toastify.css";
 import { PatternFormat } from "react-number-format";
 import { TypeAnimation } from "react-type-animation";
@@ -55,14 +55,13 @@ const Header = () => {
   const validate = (values, e) => {
     const currentNumber = values.number.replace(/\D/g, "");
 
-   
     const errors = {};
     // name checking
 
     if (!values.name) {
-      errors.name = <Text id={"homeFormAlertTitle1"} />;
+      errors.name = Text({id:"homeFormAlertTitle1"});
     } else if (values.name.length == 0 && values.name.length < 2) {
-      errors.name = <Text id={"homeFormAlertTitle3"} />;
+      errors.name = Text({id:"homeFormAlertTitle3"});
     }
 
     // company check out
@@ -127,11 +126,7 @@ const Header = () => {
               />
             </div>
           </Title>
-          {/* <Subtitle>
-           
-            <br />
-            <Text id={"homeHeaderSubtitle2"} />
-          </Subtitle> */}
+          
           <MobileBtn onClick={() => setPopUp(true)}>
             <Text id={"homeButton"} />
           </MobileBtn>
@@ -139,115 +134,94 @@ const Header = () => {
 
         <RightSide>
           <Form onSubmit={handleSubmit}>
+            <FormTitle>
+              <Text id={"homeHeaderFormTitle"} />
+            </FormTitle>
             <FormContainer>
-              <FormTitle>
-                <Text id={"homeHeaderFormTitle"} />
-              </FormTitle>
+              <div className="input-wrapper">
+               
+                <Input
+                  value={state.name}
+                  type={"Name"}
+                  placeholder={
+                    formErrors.name ? formErrors.name : Text({ id: "homeHeaderInputTitle" })
+                  }
+                  maxLength={30}
+                  onChange={(e) =>
+                    setState({ ...state, name: e.target.value.trim() })
+                  }
+                />
+              </div>
 
-              <p style={formErrors.name ? { color: "red" } : { color: "#fff" }}>
-                {formErrors.name ? (
-                  formErrors.name
-                ) : (
-                  <Text id={"homeHeaderInputTitle"} />
-                )}
-              </p>
-              <Input
-                className={"input-numb"}
-                value={state.name}
-                type={"Name"}
-                placeholder={Text({ id: "homeHeaderInputTitle" })}
-                maxLength={30}
-                onChange={(e) =>
-                  setState({ ...state, name: e.target.value.trim() })
-                }
-              />
+              <div className="input-wrapper">
+               
+                <Input
+                  value={state.company}
+                  type={"Name"}
+                  placeholder={Text({ id: "homeHeaderInputTitle4" })}
+                  maxLength={30}
+                  onChange={(e) =>
+                    setState({ ...state, company: e.target.value.trim() })
+                  }
+                />
+              </div>
 
-              <p
-                style={
-                  formErrors.company ? { color: "red" } : { color: "#fff" }
-                }
-              >
-                {formErrors.company ? (
-                  formErrors.company
-                ) : (
-                  <Text id={"homeHeaderInputTitle4"} />
-                )}
-              </p>
-              <Input
-                className={"input-numb"}
-                value={state.company}
-                type={"Name"}
-                placeholder={Text({ id: "homeHeaderInputTitle4" })}
-                maxLength={30}
-                onChange={(e) =>
-                  setState({ ...state, company: e.target.value.trim() })
-                }
-              />
+              <div className="input-wrapper">
+                
+                <PatternFormat
+                  className={"input-number"}
+                  value={state.number}
+                  type={"tel"}
+                  placeholder={"Phone Number"}
+                  format="+998(##)###-##-##"
+                  defaultValue={Text({ id: "homeHeaderInputTitle1" })}
+                  // allowEmptyFormatting
+                  mask="_"
+                  data-cy="phone"
+                  onChange={(e) =>
+                    setState({ ...state, number: e.target.value })
+                  }
+                />
+              </div>
 
-              <p
-                style={formErrors.number ? { color: "red" } : { color: "#fff" }}
-              >
-                {formErrors.number ? (
-                  formErrors.number
-                ) : (
-                  <Text id={"homeHeaderInputTitle1"} />
-                )}
-              </p>
-
-              <PatternFormat
-                className={"input-numb"}
-                value={state.number}
-                type={"tel"}
-                placeholder={"Phone Number"}
-                format="+998(##)###-##-##"
-                allowEmptyFormatting
-                mask="_"
-                data-cy="phone"
-                onChange={(e) => setState({ ...state, number: e.target.value })}
-              />
-
-              <p>
-                <Text id={"homeHeaderInputTitle5"} />
-              </p>
-              <SelectInput
-                onChange={(e) =>
-                  setState({ ...state, budget: e.target.value })
-                }
-              >
-                {serviceData.budget.map(({ id, title }) => (
-                  <Option key={id} defaultValue={`${title}`}>
-                    {title}
+              <div className="input-wrapper">
+                <SelectInput
+                  onChange={(e) =>
+                    setState({ ...state, budget: e.target.value })
+                  }
+                >
+                  <Option value={""} >
+                    <Text id={"homeHeaderInputTitle5"} />
                   </Option>
-                ))}
-              </SelectInput>
+                  {serviceData.budget.map(({ id, title }) => (
+                    <Option
+                      key={id}
+                      value={title}
+                      >
+                      {title}
+                    </Option>
+                  ))}
+                </SelectInput>
+              </div>
 
-              {/* <Input
-                className={"numb"}
-                type="email"
-                placeholder={Text({ id: "homeHeaderInputTitle2" })}
-                value={state.email}
-                onChange={(e) => setState({ ...state, email: e.target.value })}
-              /> */}
-
-              <p>
-                <Text id={"homeHeaderInputTitle3"} />
-              </p>
-
-              <SelectInput
-                onChange={(e) =>
-                  setState({ ...state, service: e.target.value })
-                }
-              >
-                {serviceData.service.map(({ id, name }) => (
-                  <Option key={id} defaultValue={`${name}`}>
-                    {name}
+              <div className="input-wrapper">
+                <SelectInput
+                  onChange={(e) =>
+                    setState({ ...state, service: e.target.value })
+                  }
+                >
+                  <Option value="">
+                    <Text id={"homeHeaderInputTitle3"} />
                   </Option>
-                ))}
-              </SelectInput>
+                  {serviceData.service.map(({ id, name }) => (
+                    <Option key={id}>{name}</Option>
+                  ))}
+                </SelectInput>
+              </div>
+              <Button>
+                <Text id={"homeButton"} />
+              </Button>
             </FormContainer>
-            <Button>
-              <Text id={"homeButton"} />
-            </Button>
           </Form>
         </RightSide>
       </Container>

@@ -6,10 +6,12 @@ export const Wrapper = styled.div`
   position: relative;
 
   @media screen and (max-width: 1100px) {
-    height: 130vh;
+    height: fit-content;
     padding-bottom: 50px;
   }
-
+  @media screen and (max-height: 900px) {
+    height: 110vh;
+  }
   @media screen and (max-width: 600px) {
     height: 100vh;
     padding-bottom: 50px;
@@ -45,6 +47,7 @@ export const Container = styled.div`
   @media screen and (max-width: 1100px) {
     flex-direction: column;
   }
+
   @media screen and (max-width: 800px) {
     height: fit-content;
     display: flex;
@@ -89,16 +92,19 @@ export const Title = styled.div`
   margin-top: 150px;
   line-height: 140%;
   text-transform: uppercase;
-   @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1500px) {
     font-size: 40px;
   }
   @media screen and (max-width: 800px) {
     font-size: 45px;
     width: 100%;
   }
+  @media screen and (max-height: 900px) {
+    font-size: 32px;
+  }
   @media screen and (max-width: 700px) {
     font-size: 17px;
-    font-weight:700;
+    font-weight: 700;
     line-height: 141%;
     width: 85%;
     margin-top: 0;
@@ -109,7 +115,6 @@ export const Title = styled.div`
   }
   .under-title {
     font-family: "Roboto" !important;
-  
   }
 `;
 export const Subtitle = styled.p`
@@ -123,9 +128,9 @@ export const Subtitle = styled.p`
   margin: auto;
   line-height: 45px;
   margin-top: 30px;
- 
+
   @media screen and (max-width: 800px) {
-    font-size:26px;
+    font-size: 26px;
     width: 100%;
   }
   @media screen and (max-width: 500px) {
@@ -140,62 +145,64 @@ export const Subtitle = styled.p`
   }
   .under-title {
     font-family: "Roboto" !important;
-  
   }
 `;
 
 export const Form = styled.form`
-  width: 400px;
-  background-color: rgba(2, 54, 147, 0.89);
-  padding: 15px 0;
-  border-radius: 20px;
+  width: 360px;
+  padding: 5px 0;
+  border-radius: 11px;
   margin: auto;
   font-size: 16px;
   font-family: Mozerati, sans-serif !important;
-  font-weight: 500 !important;
+  background-color: rgba(2, 54, 147, 0.89);
 
+  @media screen and (max-width: 1400px) {
+    width: 340px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
   p {
     color: #fff;
     font-size: 14px;
     font-weight: 500;
     padding-left: 5px;
   }
-
-  @media screen and (max-width: 1400px) {
-    width: 350px;
-  }
-  @media screen and (max-width: 800px) {
-    width: 100%;
-  }
 `;
 export const FormContainer = styled.div`
-  width: 80%;
+  width: 90%;
+  height: 100%;
   margin: auto;
-
-  .input-numb {
-    color: #fff !important;
-    width: 295px;
-    margin: 10px 0;
-    border: 0;
-    border-radius: 6px;
-    padding: 11px 12px;
-    background-color: rgb(42, 83, 162);
-    @media screen and (max-width: 1500px) {
-      width: 250px;
-      padding-left: 10px;
-    }
-    @media screen and (max-width: 800px) {
+  margin-bottom: 15px;
+  padding:5px;
+  border-radius: 5px;
+  
+  .input-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    position: relative !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .input-number {
+      color: #fff;
       width: 90%;
       margin: 7px auto;
-    }
+      border: none;
+      border-radius: 0;
+      padding: 11px 12px;
+      background-color: transparent;
+      border-bottom: 1px solid gray;
+      &::placeholder {
+        color: #fff;
+        font-size: 15px;
+      }
 
-    &::placeholder {
-      color: #fff;
-      font-size: 15px;
-    }
-
-    &:focus {
-      outline: 1px solid #0080ff;
+      &:focus {
+        outline: none;
+        /* outline: 1px solid #0080ff; */
+      }
     }
   }
 `;
@@ -209,22 +216,19 @@ export const FormTitle = styled.div`
 `;
 
 export const Input = styled.input`
-  color: #fff !important;
-  width: 295px;
-  margin: 7px 0;
+  color: #fff;
+  width: 90%;
+  margin: 7px auto;
   border: 0;
-  border-radius: 5px;
+  border-radius: 0;
   padding: 11px 12px;
-  background-color: rgb(42, 83, 162);
-  -webkit-text-fill-color: #fff;
-  @media screen and (max-width: 1500px) {
-    width: 250px;
-  }
-  @media screen and (max-width: 800px) {
-    width: 100%;
-    width: 90%;
-    margin: 7px auto;
-  }
+  /* background-color: rgb(42, 83, 162); */
+  /* -webkit-text-fill-color: #fff; */
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid gray;
+  
+ 
   &::placeholder {
     color: #fff;
     font-size: 15px;
@@ -237,18 +241,20 @@ export const Input = styled.input`
 export const SelectInput = styled.select`
   color: #fff;
   background-color: rgb(42, 83, 162);
-  margin-bottom: 10px;
   border: 0px;
   height: fit-content;
   width: 100%;
-  padding: 11px 12px;
-  border-radius: 5px;
-  margin-top: 10px;
+  padding: 11px 10px;
+  border-radius: 0;
   cursor: pointer;
   line-height: 70px;
+  margin: 10px auto;
   font-size: 15px;
   font-weight: 500;
   -webkit-text-fill-color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid gray;
 
   @media screen and (max-width: 1500px) {
     width: 98%;
@@ -269,6 +275,10 @@ export const Option = styled.option`
   cursor: pointer;
   font-size: 16px;
   -webkit-text-fill-color: #fff;
+  background-color: rgba(2, 54, 147, 0.89);
+  &:nth-child(1){
+    display: none;
+  }
 `;
 
 export const Button = styled.button`
@@ -325,7 +335,7 @@ export const MobileBtn = styled.div`
     width: fit-content;
     background-color: #fff;
     border-radius: 3px;
-    font-size:16px;
+    font-size: 16px;
     padding: 11px 40px;
     margin-top: 27px;
     margin-left: 30px;
