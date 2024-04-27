@@ -6,7 +6,10 @@ export const Wrapper = styled.nav`
   top: 0;
   left: 0;
   z-index: 999999;
-  height: 90px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media screen and (max-width: 500px) {
     height: fit-content;
     height: 70px;
@@ -16,6 +19,76 @@ export const Wrapper = styled.nav`
     display: none;
     @media only screen and (max-width: 600px) {
       display: block;
+    }
+  }
+`;
+
+export const NavTop = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #C9D6FF;
+  background: linear-gradient(
+    to right,
+    #C9D6FF,#E2E2E2
+  );
+  
+  position: relative;
+
+  .navtop-wrapper {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    @media screen and (min-width: 1600px) {
+      width: 73%;
+    }
+    @media screen and (max-width: 700px) {
+    width: 90%;
+    padding: 12px 0;
+  }
+  }
+  .navtop-left {
+    color: #222;
+    font-size: 18px;
+    @media screen and (max-width: 700px) {
+      font-size: 15px;
+  }
+  }
+  .navtop-right {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    @media screen and (max-width: 700px) {
+      font-size: 15px;
+  }
+    .nav-tel {
+      margin-right: 15px;
+      a{
+        color: #222;
+      }
+
+    }
+    .nav-messanger {
+      display: flex;
+      align-items: center;
+
+      .nav-telegram-icon{
+        height: 25px;
+        width: 25px;
+        svg {
+        height: 100%;
+        width: 100%;
+      }
+      
+      }
+      .nav-top-title{
+        color: #222;
+        padding-left: 5px;
+      }
     }
   }
 `;
@@ -51,18 +124,18 @@ export const NavInner = styled.div`
       width: 100%;
     }
   }
-  .rightContent{
+  .rightContent {
     width: fit-content;
-  display: flex;
-  align-items: center;
-}
-
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const UlWrapper = styled.ul`
   display: flex;
   li {
-    font-size: 17px;
+    font-size: 18px;
+    font-style: normal;
     font-weight: 400 !important;
   }
 
@@ -145,7 +218,7 @@ export const NavbarButton = styled.div`
   }
 `;
 export const LangWrapper = styled.div`
-margin-right: 20px;
+  margin-right: 20px;
   select {
     background-color: transparent;
     color: #fff;
@@ -159,19 +232,16 @@ margin-right: 20px;
       font-size: 14px;
       font-weight: 400;
       border-radius: 0;
-
-    
-  }
+    }
 
     option {
       color: #000;
       outline: none;
       @media screen and (max-width: 700px) {
-      font-size: 14px;
-      font-weight: 400;
-      padding: 5px;
-    
-  }
+        font-size: 14px;
+        font-weight: 400;
+        padding: 5px;
+      }
     }
   }
 `;

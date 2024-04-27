@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  height: 85vh;
+  height: 100vh;
   width: 100%;
   position: relative;
   @media screen and (max-width: 1400px) {
@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 1100px) {
-    height: fit-content;
+    height: 130vh;
     padding-bottom: 50px;
   }
 
@@ -37,14 +37,14 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   justify-content: space-between;
-  padding-top: 80px;
+  padding-top: 160px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
   @media screen and (min-width: 1600px) {
-    width: 70%;
+    width: 73%;
   }
   @media screen and (max-width: 1100px) {
     flex-direction: column;
@@ -86,13 +86,13 @@ export const RightSide = styled.div`
 export const Title = styled.div`
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 38px;
+  font-size: 41px;
   color: #fff;
   font-weight: 700;
   width: 100%;
   margin: auto;
   margin-top: 150px;
-  line-height: 140%;
+  line-height: 160%;
   text-transform: uppercase;
   @media screen and (max-width: 1500px) {
     font-size: 40px;
@@ -114,41 +114,10 @@ export const Title = styled.div`
   span {
     color: #fff !important;
     font-family: "Roboto" !important;
-  }
-  .under-title {
-    font-family: "Roboto" !important;
+    padding-left: 15px;
   }
 `;
-export const Subtitle = styled.p`
-  font-family: GothemMedium, sans-serif !important;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-size: 28px;
-  color: #fff;
-  font-weight: 500;
-  width: 100%;
-  margin: auto;
-  line-height: 45px;
-  margin-top: 30px;
 
-  @media screen and (max-width: 800px) {
-    font-size: 26px;
-    width: 100%;
-  }
-  @media screen and (max-width: 500px) {
-    font-size: 18.5px;
-    font-weight: 400;
-    line-height: 25px;
-    width: 85%;
-    margin-top: 15px;
-  }
-  span {
-    font-family: "Roboto" !important;
-  }
-  .under-title {
-    font-family: "Roboto" !important;
-  }
-`;
 
 export const Form = styled.form`
   width: 360px;

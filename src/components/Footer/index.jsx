@@ -74,9 +74,8 @@ const Footer = () => {
                                     <InstagramSvg/>
 
                                 </a>
-                                <a href="https://t.me/adigmouz">
+                                <a href="https://t.me/fazogir">
                                     <TelegramSvg/>
-
                                 </a>
                                 <a href="https://www.linkedin.com/company/adigmo-uz/">
                                     <LinkedinSvg/>

@@ -14,8 +14,6 @@ setLoader(false)
   return (
     <>
            {
-
-
 loader === true ? <Loader/> : (
 <>
 <BrowserRouter>
@@ -28,9 +26,6 @@ loader === true ? <Loader/> : (
 </>
 )
            }     
-
-         
-               
     </>
   );
 }

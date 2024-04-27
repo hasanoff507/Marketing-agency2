@@ -28,9 +28,7 @@ import {
 import Text from "../../../../language/langManager";
 
 const Header = () => {
-  // don't  edit this code
   const [popUp, setPopUp] = useState(false);
-
   const [state, setState] = useState({
     name: "",
     number: "",
@@ -40,42 +38,39 @@ const Header = () => {
     budget: "Стандартный - 6 000 000 сум",
   });
   const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
   const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormErrors(validate(state, e));
-    setIsSubmit(true);
-  };
 
   useEffect(() => {}, [formErrors]);
 
-  const validate = (values, e) => {
-    const currentNumber = values.number.replace(/\D/g, "");
-
+  const validate = (values) => {
     const errors = {};
-    // name checking
 
     if (!values.name) {
-      errors.name = Text({id:"homeFormAlertTitle1"});
-    } else if (values.name.length === 0 && values.name.length < 2) {
-      errors.name = Text({id:"homeFormAlertTitle3"});
+      errors.name = "Имя обязательно.";
+    } else if (values.name.length < 3) {
+      errors.name = "Имя должно содержать не менее 2 символов.";
     }
 
-    // company check out
-    else if (values.company.length === 0) {
-      errors.company = <Text id={"homeFormAlertTitle12"} />;
+    if (!values.company) {
+      errors.company = "Название компании обязательно.";
     } else if (values.company.length < 4) {
-      errors.company = <Text id={"homeFormAlertTitle13"} />;
+      errors.company = "Название компании должно состоять не менее чем из 4 символов.";
     }
 
-    // number checking
-    else if (values.number.length === "") {
-      errors.number = <Text id={"homeFormAlertTitle2"} />;
-    } else if (currentNumber.length < 12) {
-      errors.number = <Text id={"homeFormAlertTitle4"} />;
-    } else {
+    if (!values.number) {
+      errors.number = "Номер телефона обязателен.";
+    } else if (values.number.replace(/\D/g, "").length < 12) {
+      errors.number = "Неверный номер телефона.";
+    }
+
+    return errors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errors = validate(state);
+    setFormErrors(errors);
+    if (Object.keys(errors).length === 0) {
       HttpRequest({
         e,
         state,
@@ -89,8 +84,6 @@ const Header = () => {
           console.log(err);
         });
     }
-
-    return errors;
   };
 
   return (
@@ -101,9 +94,8 @@ const Header = () => {
         <LeftSide>
           <Title>
             <Text id={"homeHeaderTitle1"} /> <br />
-            <Text id={"homeHeaderSubtitle2"} />
-            <div>
-              <TypeAnimation
+            <Text id={"homeHeaderSubtitle2"} /> 
+            <TypeAnimation 
                 sequence={[
                   "Google Ads", // Types 'One'
                   2000, // Waits 1s
@@ -114,8 +106,6 @@ const Header = () => {
                   "Yandex Direct",
                   4000,
                   "SEO",
-
-                  // Types 'Three' without deleting 'Two'
                 ]}
                 wrapper="span"
                 speed={7}
@@ -123,9 +113,9 @@ const Header = () => {
                 repeat={Infinity}
                 style={{ fontSize: "", display: "inline-block" }}
               />
-            </div>
-          </Title>
           
+          </Title>
+
           <MobileBtn onClick={() => setPopUp(true)}>
             <Text id={"homeButton"} />
           </MobileBtn>
@@ -138,49 +128,49 @@ const Header = () => {
             </FormTitle>
             <FormContainer>
               <div className="input-wrapper">
-               
                 <Input
                   value={state.name}
                   type={"Name"}
-                  placeholder={
-                    formErrors.name ? formErrors.name : Text({ id: "homeHeaderInputTitle" })
-                  }
+                  placeholder="Name"
                   maxLength={30}
                   onChange={(e) =>
                     setState({ ...state, name: e.target.value.trim() })
                   }
                 />
+                {formErrors.name && (
+                  <div style={{ color: "red" }}>{formErrors.name}</div>
+                )}
               </div>
-
               <div className="input-wrapper">
-               
                 <Input
                   value={state.company}
                   type={"Name"}
-                  placeholder={Text({ id: "homeHeaderInputTitle4" })}
+                  placeholder="Company"
                   maxLength={30}
                   onChange={(e) =>
                     setState({ ...state, company: e.target.value.trim() })
                   }
                 />
+                {formErrors.company && (
+                  <div style={{ color: "red" }}>{formErrors.company}</div>
+                )}
               </div>
-
               <div className="input-wrapper">
-                
                 <PatternFormat
                   className={"input-number"}
                   value={state.number}
                   type={"tel"}
-                  placeholder={"Phone Number"}
+                  placeholder="Phone Number"
                   format="+998(##)###-##-##"
-                  defaultValue={Text({ id: "homeHeaderInputTitle1" })}
-                  // allowEmptyFormatting
                   mask="_"
                   data-cy="phone"
                   onChange={(e) =>
                     setState({ ...state, number: e.target.value })
                   }
                 />
+                {formErrors.number && (
+                  <div style={{ color: "red" }}>{formErrors.number}</div>
+                )}
               </div>
 
               <div className="input-wrapper">
@@ -189,14 +179,11 @@ const Header = () => {
                     setState({ ...state, budget: e.target.value })
                   }
                 >
-                  <Option value={""} >
-                    <Text id={"homeHeaderInputTitle5"} />
+                  <Option value={""}>
+                    Select Budget
                   </Option>
                   {serviceData.budget.map(({ id, title }) => (
-                    <Option
-                      key={id}
-                      value={title}
-                      >
+                    <Option key={id} value={title}>
                       {title}
                     </Option>
                   ))}
@@ -210,15 +197,15 @@ const Header = () => {
                   }
                 >
                   <Option value="">
-                    <Text id={"homeHeaderInputTitle3"} />
+                    Select Service
                   </Option>
                   {serviceData.service.map(({ id, name }) => (
                     <Option key={id}>{name}</Option>
                   ))}
                 </SelectInput>
               </div>
-              <Button>
-                <Text id={"homeButton"} />
+              <Button type="submit">
+                Submit
               </Button>
             </FormContainer>
           </Form>
@@ -227,4 +214,5 @@ const Header = () => {
     </Wrapper>
   );
 };
+
 export default Header;
