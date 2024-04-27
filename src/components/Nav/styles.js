@@ -11,8 +11,7 @@ export const Wrapper = styled.nav`
   flex-direction: column;
   justify-content: center;
   @media screen and (max-width: 500px) {
-    height: fit-content;
-    height: 70px;
+    height: 120px !important;
   }
 
   .sidebar-button {
@@ -28,11 +27,7 @@ export const NavTop = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #C9D6FF;
-  background: linear-gradient(
-    to right,
-    #C9D6FF,#E2E2E2
-  );
+  background-color: lightgray;
   
   position: relative;
 
@@ -55,7 +50,7 @@ export const NavTop = styled.div`
     color: #222;
     font-size: 18px;
     @media screen and (max-width: 700px) {
-      font-size: 15px;
+      display: none;
   }
   }
   .navtop-right {
@@ -63,14 +58,44 @@ export const NavTop = styled.div`
     align-items: center;
     font-size: 18px;
     @media screen and (max-width: 700px) {
-      font-size: 15px;
+      width: 95%;
+      justify-content: space-between;
+      font-size: 14px;
   }
     .nav-tel {
+      display: flex;
+      align-items: center;
       margin-right: 15px;
+
+      @media screen and (max-width:700px){
+        height: 20px;
+      border-right: 1px solid #222;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding-right: 60px;
+      
+     
+      }
+      .nav-call-svg{
+        height: 25px;
+        width: 25px;
+        margin-right: 20px;
+        svg{
+          height:100%;
+          width: 100%;
+        }
+      }
       a{
         color: #222;
       }
-
+      .material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
     }
     .nav-messanger {
       display: flex;

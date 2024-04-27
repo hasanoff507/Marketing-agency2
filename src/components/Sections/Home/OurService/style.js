@@ -17,8 +17,12 @@ export const Container = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 800px){
+  @media screen and (max-width: 1200px){
     width: 100%;
+  }
+ 
+  @media screen and (max-width: 800px){
+    width: 95%;
   }
  
   h1 {
@@ -111,7 +115,11 @@ export const ServiceBox =styled.div`
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   align-items: center;
-
+  @media screen and  (max-width: 1350px) {
+      height: 600px;
+      width: 45%;
+    }
+   
   @media screen and (max-width: 700px) {
     width: 100%;
     padding: 50px 15px;

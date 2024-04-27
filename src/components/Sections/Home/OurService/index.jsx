@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Button, Container, ServiceBox, ServiceWrapper, Title, Wrapper} from "./style";
+import {Button, Container, ServiceBox, ServiceWrapper,  Wrapper} from "./style";
 import {ReactComponent as GoogleSvg} from "../../../../assets/serviceItems/serviceLogo/Google Ads.svg";
 import {ReactComponent as FacebookSvg} from "../../../../assets/serviceItems/serviceLogo/facebook-ads.svg";
 import {ReactComponent as BingSvg} from "../../../../assets/serviceItems/serviceLogo/yandex.svg";

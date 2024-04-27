@@ -9,7 +9,7 @@ import Text from "../../../../language/langManager";
 const Projects = () => {
   const [visible, setVisible] = useState(6);
   const [showSeeMore, setShowSeeMore] = useState(true);
-  const [posts, setPosts] = useState(data.projects);
+  const [posts] = useState(data.projects);
 
   const handleLoadMore = () => {
     setVisible(visible + 3);

@@ -78,13 +78,13 @@ const Contact = () => {
                         onChange={(e) => setState({ ...state, name: e.target.value })}
                     />
                     <p style={formErrors.number ? { color: "red" } : { color: "black" }}>
-                        {formErrors.number ? formErrors.number : "Phone Number"}
+                        {formErrors.number ? formErrors.number : "Номер телефона"}
                     </p>
                     <PatternFormat
                         className="font20 extraBold patternof"
                         value={state.number}
                         type={"tel"}
-                        placeholder={"Phone Number"}
+                        placeholder={"Номер телефона"}
                         format="+998(##)###-##-##"
                         allowEmptyFormatting
                         mask="_"

@@ -16,7 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { PatternFormat } from "react-number-format";
 import Text from "../../language/langManager";
 
-const PopUp = ({ setPopUp, popUp }) => {
+const PopUp = ({ setPopUp}) => {
   const [state, setState] = useState({
     name: "",
     number: "",
@@ -26,14 +26,11 @@ const PopUp = ({ setPopUp, popUp }) => {
     budget: "Стандартный - 6 000 000 сум",
   });
   const [formErrors, setFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
-
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(state, e));
-    setIsSubmit(true);
   };
 
   useEffect(() => {}, [formErrors]);

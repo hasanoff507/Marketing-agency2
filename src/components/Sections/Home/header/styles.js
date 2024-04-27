@@ -86,30 +86,35 @@ export const RightSide = styled.div`
 export const Title = styled.div`
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 41px;
+  font-size: 48px;
   color: #fff;
-  font-weight: 700;
+  font-weight: 900 ;
   width: 100%;
   margin: auto;
   margin-top: 150px;
-  line-height: 160%;
+  line-height: 170%;
   text-transform: uppercase;
   @media screen and (max-width: 1500px) {
     font-size: 40px;
+  line-height: 150%;
+
   }
-  @media screen and (max-width: 800px) {
-    font-size: 45px;
-    width: 100%;
-  }
+  
   @media screen and (max-height: 900px) {
     font-size: 32px;
   }
   @media screen and (max-width: 700px) {
-    font-size: 17px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 141%;
     width: 85%;
+  }  
+  @media screen and (max-width: 600px) {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 141%;
     margin-top: 0;
+    width: 85%;
   }
   span {
     color: #fff !important;

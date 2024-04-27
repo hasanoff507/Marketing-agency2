@@ -131,7 +131,7 @@ const Header = () => {
                 <Input
                   value={state.name}
                   type={"Name"}
-                  placeholder="Name"
+                  placeholder="Имя"
                   maxLength={30}
                   onChange={(e) =>
                     setState({ ...state, name: e.target.value.trim() })
@@ -145,7 +145,7 @@ const Header = () => {
                 <Input
                   value={state.company}
                   type={"Name"}
-                  placeholder="Company"
+                  placeholder="Компания"
                   maxLength={30}
                   onChange={(e) =>
                     setState({ ...state, company: e.target.value.trim() })
@@ -160,7 +160,7 @@ const Header = () => {
                   className={"input-number"}
                   value={state.number}
                   type={"tel"}
-                  placeholder="Phone Number"
+                  placeholder="Номер телефона"
                   format="+998(##)###-##-##"
                   mask="_"
                   data-cy="phone"
@@ -180,7 +180,7 @@ const Header = () => {
                   }
                 >
                   <Option value={""}>
-                    Select Budget
+                  Ваш рекламный бюджет
                   </Option>
                   {serviceData.budget.map(({ id, title }) => (
                     <Option key={id} value={title}>
@@ -197,7 +197,7 @@ const Header = () => {
                   }
                 >
                   <Option value="">
-                    Select Service
+                  Сервис
                   </Option>
                   {serviceData.service.map(({ id, name }) => (
                     <Option key={id}>{name}</Option>
